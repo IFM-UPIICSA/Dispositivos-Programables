@@ -1,0 +1,34 @@
+MPLINK 5.08, LINKER
+Linker Map File - Created Thu Sep 06 12:34:33 2018
+
+                                 Section Info
+                  Section       Type    Address   Location Size(Bytes)
+                ---------  ---------  ---------  ---------  ---------
+                   .org_0       code   0x000000    program   0x000020
+                   .cinit    romdata   0x000020    program   0x000002
+
+
+
+                              Program Memory Usage 
+                               Start         End      
+                           ---------   ---------      
+                            0x000000    0x000021      
+            34 out of 33048 program addresses used, program memory utilization is 0%
+
+
+
+                              Symbols - Sorted by Name
+                     Name    Address   Location    Storage File                     
+                ---------  ---------  ---------  --------- ---------                
+                  CONFIGU   0x000000    program     static C:\Users\Midoriya\Github\Dispositivos\Practicas\Ingresa B Suma\IngresaBSum.X\Ingresa.asm
+                     SUMA   0x000016    program     static C:\Users\Midoriya\Github\Dispositivos\Practicas\Ingresa B Suma\IngresaBSum.X\Ingresa.asm
+
+
+
+                              Symbols - Sorted by Address
+                     Name    Address   Location    Storage File                     
+                ---------  ---------  ---------  --------- ---------                
+                  CONFIGU   0x000000    program     static C:\Users\Midoriya\Github\Dispositivos\Practicas\Ingresa B Suma\IngresaBSum.X\Ingresa.asm
+                     SUMA   0x000016    program     static C:\Users\Midoriya\Github\Dispositivos\Practicas\Ingresa B Suma\IngresaBSum.X\Ingresa.asm
+
+
