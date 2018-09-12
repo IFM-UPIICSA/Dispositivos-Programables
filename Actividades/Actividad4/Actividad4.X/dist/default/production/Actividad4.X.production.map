@@ -1,0 +1,34 @@
+MPLINK 5.08, LINKER
+Linker Map File - Created Wed Sep 12 10:48:26 2018
+
+                                 Section Info
+                  Section       Type    Address   Location Size(Bytes)
+                ---------  ---------  ---------  ---------  ---------
+                   .org_0       code   0x000000    program   0x000030
+                   .cinit    romdata   0x000030    program   0x000002
+
+
+
+                              Program Memory Usage 
+                               Start         End      
+                           ---------   ---------      
+                            0x000000    0x000031      
+            50 out of 33048 program addresses used, program memory utilization is 0%
+
+
+
+                              Symbols - Sorted by Name
+                     Name    Address   Location    Storage File                     
+                ---------  ---------  ---------  --------- ---------                
+                  CONFIGU   0x000000    program     static C:\Users\Midoriya\Github\Dispositivos\Actividades\Actividad4\Actividad4.X\multi.asm
+                     MASK   0x000014    program     static C:\Users\Midoriya\Github\Dispositivos\Actividades\Actividad4\Actividad4.X\multi.asm
+
+
+
+                              Symbols - Sorted by Address
+                     Name    Address   Location    Storage File                     
+                ---------  ---------  ---------  --------- ---------                
+                  CONFIGU   0x000000    program     static C:\Users\Midoriya\Github\Dispositivos\Actividades\Actividad4\Actividad4.X\multi.asm
+                     MASK   0x000014    program     static C:\Users\Midoriya\Github\Dispositivos\Actividades\Actividad4\Actividad4.X\multi.asm
+
+
