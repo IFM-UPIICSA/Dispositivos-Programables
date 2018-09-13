@@ -1,11 +1,11 @@
 MPLINK 5.08, LINKER
-Linker Map File - Created Thu Sep 13 12:34:08 2018
+Linker Map File - Created Thu Sep 13 12:55:34 2018
 
                                  Section Info
                   Section       Type    Address   Location Size(Bytes)
                 ---------  ---------  ---------  ---------  ---------
-                   .org_0       code   0x000000    program   0x000036
-                   .cinit    romdata   0x000036    program   0x000002
+                   .org_0       code   0x000000    program   0x00003a
+                   .cinit    romdata   0x00003a    program   0x000002
 .config_300001_BUILD/DEFAULT/PRODUCTION/CODIGO.    romdata   0x300001    program   0x000001
 .config_300002_BUILD/DEFAULT/PRODUCTION/CODIGO.    romdata   0x300002    program   0x000001
 .config_300003_BUILD/DEFAULT/PRODUCTION/CODIGO.    romdata   0x300003    program   0x000001
@@ -23,11 +23,11 @@ Linker Map File - Created Thu Sep 13 12:34:08 2018
                               Program Memory Usage 
                                Start         End      
                            ---------   ---------      
-                            0x000000    0x000037      
+                            0x000000    0x00003b      
                             0x300001    0x300003      
                             0x300005    0x300006      
                             0x300008    0x30000d      
-            67 out of 33048 program addresses used, program memory utilization is 0%
+            71 out of 33048 program addresses used, program memory utilization is 0%
 
 
 
@@ -35,7 +35,7 @@ Linker Map File - Created Thu Sep 13 12:34:08 2018
                      Name    Address   Location    Storage File                     
                 ---------  ---------  ---------  --------- ---------                
                  SETTINGS   0x000000    program     static C:\Users\Midoriya\Github\Dispositivos\Practicas\Practica 3\SumaBin3Bits.X\Codigo.asm
-                     SUMA   0x000014    program     static C:\Users\Midoriya\Github\Dispositivos\Practicas\Practica 3\SumaBin3Bits.X\Codigo.asm
+                     SUMA   0x000016    program     static C:\Users\Midoriya\Github\Dispositivos\Practicas\Practica 3\SumaBin3Bits.X\Codigo.asm
 
 
 
@@ -43,6 +43,6 @@ Linker Map File - Created Thu Sep 13 12:34:08 2018
                      Name    Address   Location    Storage File                     
                 ---------  ---------  ---------  --------- ---------                
                  SETTINGS   0x000000    program     static C:\Users\Midoriya\Github\Dispositivos\Practicas\Practica 3\SumaBin3Bits.X\Codigo.asm
-                     SUMA   0x000014    program     static C:\Users\Midoriya\Github\Dispositivos\Practicas\Practica 3\SumaBin3Bits.X\Codigo.asm
+                     SUMA   0x000016    program     static C:\Users\Midoriya\Github\Dispositivos\Practicas\Practica 3\SumaBin3Bits.X\Codigo.asm
 
 
