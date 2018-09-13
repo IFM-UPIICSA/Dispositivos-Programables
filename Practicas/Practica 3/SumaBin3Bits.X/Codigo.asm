@@ -1,0 +1,34 @@
+;SUMADOR BINARIO PARALELO DE 3 BITS
+	;Default
+    LIST P=18F4550
+    #INCLUDE<P18F4550.INC>
+	;Declaraciones Previas
+    NUM1    EQU	.10
+    NUM2    EQU	.11
+    ORG	    .0
+    
+SETTINGS
+	;CONFIGURACIONES DEL PUERTO A
+    ;LIMPIAR PUERTO
+    SETF    TRISA	
+    CLRF    PORTA
+    CLRF    LATA    
+    MOVLW   .15		
+    MOVWF   ADCON1	;DEFINIR QUE TODAS SON ENTRADAS
+    MOVLW   B'00000111'
+    MOVWF   CMCON	;Apagar el comparador de voltaje
+    
+	;CONFIGURACIONES DEL PUERTO B
+    ;LIMPIAR PUERTO
+    CLRF    PORTB
+    CLRF    LATB
+    CLRF    TRISB
+    MOVLW   .0
+    MOVWF   ADCON1
+    
+SUMA	
+    
+    
+    
+    END
+
