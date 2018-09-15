@@ -1,4 +1,4 @@
-MPASM 5.77                        CODIGO.ASM   9-13-2018  12:55:33         PAGE  1
+MPASM 5.77                        CODIGO.ASM   9-15-2018  9:33:19         PAGE  1
 
 
 LOC  OBJECT CODE     LINE SOURCE TEXT
@@ -57,7 +57,7 @@ LOC  OBJECT CODE     LINE SOURCE TEXT
                       00040     CONFIG       WRT1=OFF
                       00041     CONFIG       WRT2=OFF
                       00042     CONFIG       WRT3=OFF
-MPASM 5.77                        CODIGO.ASM   9-13-2018  12:55:33         PAGE  2
+MPASM 5.77                        CODIGO.ASM   9-15-2018  9:33:19         PAGE  2
 
 
 LOC  OBJECT CODE     LINE SOURCE TEXT
@@ -115,20 +115,21 @@ Warning[207]: Found label after column 1. (NUM2)
 000022 420B           00090     RRNCF   NUM2,F      ;ROTAR A LA DERECHA UNA VEZ
 000024 420B           00091     RRNCF   NUM2,F      ;ROTAR A LA DERECHA UNA VEZ
 000026 420B           00092     RRNCF   NUM2,F      ;ROTAR A LA DERECHA UNA VEZ
-000028 0E07           00093     MOVLW   B'00000111'  
-MPASM 5.77                        CODIGO.ASM   9-13-2018  12:55:33         PAGE  3
+000028 420B           00093     RRNCF   NUM2,F      ;ROTAR A LA DERECHA UNA VEZ
+MPASM 5.77                        CODIGO.ASM   9-15-2018  9:33:19         PAGE  3
 
 
 LOC  OBJECT CODE     LINE SOURCE TEXT
   VALUE
 
-00002A 160B           00094     ANDWF   NUM2,F      ;ENMASCARAR LOS 3 PRIMEROS BITS
-00002C C00A FFE8      00095     MOVFF   NUM1,WREG   ;MOVER NUM1 A W
-000030 260B           00096     ADDWF   NUM2        ;SUMAR W=NUM1 CON NUM2 Y SE ALMACENA EN NUM2
-000032 C00B FF81      00097     MOVFF   NUM2,PORTB  ;MOVER NUM2 A PORTB
-000036 EF?? F???      00098     GOTO    SUMA
-                      00099     END
-MPASM 5.77                        CODIGO.ASM   9-13-2018  12:55:33         PAGE  4
+00002A 0E07           00094     MOVLW   B'00000111'  
+00002C 160B           00095     ANDWF   NUM2,F      ;ENMASCARAR LOS 3 PRIMEROS BITS
+00002E C00A FFE8      00096     MOVFF   NUM1,WREG   ;MOVER NUM1 A W
+000032 260B           00097     ADDWF   NUM2        ;SUMAR W=NUM1 CON NUM2 Y SE ALMACENA EN NUM2
+000034 C00B FF81      00098     MOVFF   NUM2,PORTB  ;MOVER NUM2 A PORTB
+000038 EF?? F???      00099     GOTO    SUMA
+                      00100     END
+MPASM 5.77                        CODIGO.ASM   9-15-2018  9:33:19         PAGE  4
 
 
 SYMBOL TABLE
@@ -187,7 +188,7 @@ BRG16                             00000003
 BRGH                              00000002
 BSR                               00000FE0
 BTOEE                             00000004
-MPASM 5.77                        CODIGO.ASM   9-13-2018  12:55:33         PAGE  5
+MPASM 5.77                        CODIGO.ASM   9-15-2018  9:33:19         PAGE  5
 
 
 SYMBOL TABLE
@@ -246,7 +247,7 @@ CM2                               00000002
 CMCON                             00000FB4
 CMIE                              00000006
 CMIF                              00000006
-MPASM 5.77                        CODIGO.ASM   9-13-2018  12:55:33         PAGE  6
+MPASM 5.77                        CODIGO.ASM   9-15-2018  9:33:19         PAGE  6
 
 
 SYMBOL TABLE
@@ -305,7 +306,7 @@ EEIP                              00000004
 EEPGD                             00000007
 ENDP0                             00000003
 ENDP1                             00000004
-MPASM 5.77                        CODIGO.ASM   9-13-2018  12:55:33         PAGE  7
+MPASM 5.77                        CODIGO.ASM   9-15-2018  9:33:19         PAGE  7
 
 
 SYMBOL TABLE
@@ -364,7 +365,7 @@ HLVDL3                            00000003
 I2C_DAT                           00000005
 I2C_READ                          00000002
 I2C_START                         00000003
-MPASM 5.77                        CODIGO.ASM   9-13-2018  12:55:33         PAGE  8
+MPASM 5.77                        CODIGO.ASM   9-15-2018  9:33:19         PAGE  8
 
 
 SYMBOL TABLE
@@ -423,7 +424,7 @@ LATA6                             00000006
 LATB                              00000F8A
 LATB0                             00000000
 LATB1                             00000001
-MPASM 5.77                        CODIGO.ASM   9-13-2018  12:55:33         PAGE  9
+MPASM 5.77                        CODIGO.ASM   9-15-2018  9:33:19         PAGE  9
 
 
 SYMBOL TABLE
@@ -482,7 +483,7 @@ NOT_T1SYNC                        00000002
 NOT_T3SYNC                        00000002
 NOT_TO                            00000003
 NOT_W                             00000002
-MPASM 5.77                        CODIGO.ASM   9-13-2018  12:55:33         PAGE 10
+MPASM 5.77                        CODIGO.ASM   9-15-2018  9:33:19         PAGE 10
 
 
 SYMBOL TABLE
@@ -541,7 +542,7 @@ POR                               00000001
 PORTA                             00000F80
 PORTB                             00000F81
 PORTC                             00000F82
-MPASM 5.77                        CODIGO.ASM   9-13-2018  12:55:33         PAGE 11
+MPASM 5.77                        CODIGO.ASM   9-15-2018  9:33:19         PAGE 11
 
 
 SYMBOL TABLE
@@ -600,7 +601,7 @@ RC5                               00000005
 RC6                               00000006
 RC7                               00000007
 RCEN                              00000003
-MPASM 5.77                        CODIGO.ASM   9-13-2018  12:55:33         PAGE 12
+MPASM 5.77                        CODIGO.ASM   9-15-2018  9:33:19         PAGE 12
 
 
 SYMBOL TABLE
@@ -659,7 +660,7 @@ SPP0                              00000000
 SPP1                              00000001
 SPP2                              00000002
 SPP3                              00000003
-MPASM 5.77                        CODIGO.ASM   9-13-2018  12:55:33         PAGE 13
+MPASM 5.77                        CODIGO.ASM   9-15-2018  9:33:19         PAGE 13
 
 
 SYMBOL TABLE
@@ -718,7 +719,7 @@ T0CS                              00000005
 T0IE                              00000005
 T0IF                              00000002
 T0IP                              00000002
-MPASM 5.77                        CODIGO.ASM   9-13-2018  12:55:33         PAGE 14
+MPASM 5.77                        CODIGO.ASM   9-15-2018  9:33:19         PAGE 14
 
 
 SYMBOL TABLE
@@ -777,7 +778,7 @@ TMR2IF                            00000001
 TMR2IP                            00000001
 TMR2ON                            00000002
 TMR3                              00000FB2
-MPASM 5.77                        CODIGO.ASM   9-13-2018  12:55:33         PAGE 15
+MPASM 5.77                        CODIGO.ASM   9-15-2018  9:33:19         PAGE 15
 
 
 SYMBOL TABLE
@@ -836,7 +837,7 @@ TRISE0                            00000000
 TRISE1                            00000001
 TRISE2                            00000002
 TRMT                              00000001
-MPASM 5.77                        CODIGO.ASM   9-13-2018  12:55:33         PAGE 16
+MPASM 5.77                        CODIGO.ASM   9-15-2018  9:33:19         PAGE 16
 
 
 SYMBOL TABLE
@@ -895,7 +896,7 @@ URSTIF                            00000000
 USBEN                             00000003
 USBIE                             00000005
 USBIF                             00000005
-MPASM 5.77                        CODIGO.ASM   9-13-2018  12:55:33         PAGE 17
+MPASM 5.77                        CODIGO.ASM   9-15-2018  9:33:19         PAGE 17
 
 
 SYMBOL TABLE
@@ -954,7 +955,7 @@ _CP2_OFF_5L                       000000FF
 _CP2_ON_5L                        000000FB
 _CP3_OFF_5L                       000000FF
 _CP3_ON_5L                        000000F7
-MPASM 5.77                        CODIGO.ASM   9-13-2018  12:55:33         PAGE 18
+MPASM 5.77                        CODIGO.ASM   9-15-2018  9:33:19         PAGE 18
 
 
 SYMBOL TABLE
@@ -1013,7 +1014,7 @@ _LPT1OSC_ON_3H                    000000FF
 _LVP_OFF_4L                       000000FB
 _LVP_ON_4L                        000000FF
 _MCLRE_OFF_3H                     0000007F
-MPASM 5.77                        CODIGO.ASM   9-13-2018  12:55:33         PAGE 19
+MPASM 5.77                        CODIGO.ASM   9-15-2018  9:33:19         PAGE 19
 
 
 SYMBOL TABLE
@@ -1072,7 +1073,7 @@ _WRTD_OFF_6H                      000000FF
 _WRTD_ON_6H                       0000007F
 _XINST_OFF_4L                     000000BF
 _XINST_ON_4L                      000000FF
-MPASM 5.77                        CODIGO.ASM   9-13-2018  12:55:33         PAGE 20
+MPASM 5.77                        CODIGO.ASM   9-15-2018  9:33:19         PAGE 20
 
 
 SYMBOL TABLE

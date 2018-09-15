@@ -1,11 +1,11 @@
 MPLINK 5.08, LINKER
-Linker Map File - Created Thu Sep 13 12:55:34 2018
+Linker Map File - Created Sat Sep 15 09:33:20 2018
 
                                  Section Info
                   Section       Type    Address   Location Size(Bytes)
                 ---------  ---------  ---------  ---------  ---------
-                   .org_0       code   0x000000    program   0x00003a
-                   .cinit    romdata   0x00003a    program   0x000002
+                   .org_0       code   0x000000    program   0x00003c
+                   .cinit    romdata   0x00003c    program   0x000002
 .config_300001_BUILD/DEFAULT/PRODUCTION/CODIGO.    romdata   0x300001    program   0x000001
 .config_300002_BUILD/DEFAULT/PRODUCTION/CODIGO.    romdata   0x300002    program   0x000001
 .config_300003_BUILD/DEFAULT/PRODUCTION/CODIGO.    romdata   0x300003    program   0x000001
@@ -23,11 +23,11 @@ Linker Map File - Created Thu Sep 13 12:55:34 2018
                               Program Memory Usage 
                                Start         End      
                            ---------   ---------      
-                            0x000000    0x00003b      
+                            0x000000    0x00003d      
                             0x300001    0x300003      
                             0x300005    0x300006      
                             0x300008    0x30000d      
-            71 out of 33048 program addresses used, program memory utilization is 0%
+            73 out of 33048 program addresses used, program memory utilization is 0%
 
 
 
