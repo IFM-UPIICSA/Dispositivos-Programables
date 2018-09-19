@@ -1,4 +1,4 @@
-MPASM 5.77                       MASCARA.ASM   9-12-2018  9:09:14         PAGE  1
+MPASM 5.77                       MASCARA.ASM   9-19-2018  10:17:16         PAGE  1
 
 
 LOC  OBJECT CODE     LINE SOURCE TEXT
@@ -19,42 +19,102 @@ LOC  OBJECT CODE     LINE SOURCE TEXT
                       00009 
                       01765         LIST
                       00005     
-                      00006     ;PALABRA DE CONFIGURACION
-                      00007     
+                      00006     ;CONFIG1L   DIR 300000h     20h
+                      00007                 ;CONFIG PLLDIV=1         ; 
+                      00008                 ;CONFIG CPUDIV=OSC1_PLL2        ;CUANDO SE USA XTAL      
+                      00009                         CONFIG  FOSC=INTOSCIO_EC        ;OSCILADOR INTERNO, RA6 COMO PIN, USB USA OSC EC
+                      00010                         CONFIG  FCMEN=OFF                     ;DESHABILITDO EL MONITOREO DEL RELOJ
+                      00011                         CONFIG  IESO=OFF
+                      00012                         ;CONFIG2L  DIR 300002H  38h
+                      00013                                 CONFIG  PWRT=ON                           ;PWRT HABILITADO
+                      00014                         CONFIG        BOR=OFF            ;BROWN OUT RESET DESHABILITADO
+                      00015                         CONFIG        BORV=3             ;RESET AL MINIMO VOLTAJE NO UTILZADO EN ESTE CA
+                            SO
+                      00016                 CONFIG  VREGEN=ON        ;REGULADOR DE USB ENCENDIDO
+                      00017                 ;CONFIG2H  DIR 300003H  1Eh
+                      00018                 CONFIG  WDT=OFF                          ;PERRO GUARDIAN (WATCH DOG) DESHABILITADO
+                      00019                 CONFIG        WDTPS=32768                 ;TIMER DEL WATCHDOG 
+                      00020                 ;CONFIG3H   DIR 300005H 85h
+                      00021                 CONFIG  CCP2MX=ON        ;CCP2 MULTIPLEXADAS CON RC1    
+                      00022                 CONFIG  PBADEN=OFF                      ;PUERTO B PINES DEL 0 AL 4 ENTRADAS DIGITALES
+                      00023                 CONFIG        LPT1OSC=OFF        ;TIMER1 CONFIGURADO PARA OPERAR EN BAJA POTENCIA
+                      00024                 CONFIG  MCLRE=ON                         ;MASTER CLEAR HABILITADO
+                      00025                 ;CONFIG4L   DIR 300006H 81h
+                      00026                 CONFIG  STVREN=ON                             ;SI EL STACK SE LLENA CAUSE RESET         
+                      00027                 CONFIG  LVP=OFF          ;PROGRAMACIÒN EN BAJO VOLTAJE APAGADO
+                      00028                 CONFIG  ICPRT=OFF                              ;REGISTRO ICPORT DESHABILITADO
+                      00029         CONFIG        XINST=OFF                        ;SET DE EXTENCION DE INSTRUCCIONES Y DIRECCIONAMI
+                            ENTO INDEXADO OFF
+                      00030                 ;CONFIG5L   DIR 300008H 0Fh
+                      00031                 CONFIG  CP0=OFF          ;LOS BLOQUES DEL CÒDIGO DE PROGRAMA
+                      00032                 CONFIG  CP1=OFF                             ;NO ESTAN PROTEGIDOS
+                      00033                 CONFIG  CP2=OFF          
+                      00034                 CONFIG  CP3=OFF
+                      00035                 ;CONFIG5H  DR 300009H           0Ch
+                      00036                 CONFIG  CPB=OFF          ;SECTOR BOOT NO ESTA PROTEGIDO
+                      00037                 CONFIG  CPD=OFF          ;EEPROM NO PROTEGIDA
+                      00038                 ;CONFIG6L    DIR 30000AH        0Fh
+                      00039                 CONFIG   WRT0=OFF                             ;BLOQUES NO PROTEGIDOS CONTRA ESCRITURA
+                      00040                 CONFIG   WRT1=OFF
+                      00041                 CONFIG   WRT2=OFF
+MPASM 5.77                       MASCARA.ASM   9-19-2018  10:17:16         PAGE  2
+
+
+LOC  OBJECT CODE     LINE SOURCE TEXT
+  VALUE
+
+                      00042                 CONFIG   WRT3=OFF
+                      00043 
+                      00044                 ;CONFIG6H DIR 30000BH   E0h
+                      00045                 CONFIG   WRTC=OFF                ;CONFIGURACION DE REGISTROS NO PROTEGIDO
+                      00046                 CONFIG   WRTB=OFF                ;BLOQUE BOOTEABLE NO PROTEGIDO
+                      00047                 CONFIG   WRTD=OFF                ;EEPROMDE DATOS NO PROTEGIDA
+                      00048 
+                      00049                 ;CONFIG7L    DIR 30000CH        0Fh
+                      00050                 CONFIG   EBTR0=OFF              ;TABLAS DE LETURA NO PROTEGIDAS
+                      00051                 CONFIG   EBTR1=OFF
+                      00052                 CONFIG   EBTR2=OFF
+                      00053                 CONFIG   EBTR3=OFF
+                      00054 
+                      00055                 ;CONFIG7H   DIR 30000DH 40h
+                      00056                 CONFIG   EBTRB=OFF                            ;TABLAS NO PROTEGIDAS
+                      00057     
+                      00058     ;PALABRA DE CONFIGURACION
+                      00059     
 Warning[207]: Found label after column 1. (CTE)
-  00000008            00008    CTE      EQU     .8
+  00000008            00060    CTE      EQU     .8
 Warning[207]: Found label after column 1. (DATOA)
-  00000028            00009    DATOA    EQU     .40
-                      00010 
-                      00011            ORG  .0
-000000                00012 CONFIGU     ;LIMPIAR ENTRADAS
-000000 6A93           00013             CLRF        TRISB
-000002 6A81           00014             CLRF        PORTB
-000004 6A8A           00015             CLRF        LATB
-000006 0E0F           00016             MOVLW       .15
-000008 6EC1           00017             MOVWF       ADCON1
-00000A 0E07           00018             MOVLW       .7
-00000C 6EB4           00019             MOVWF       CMCON
-                      00020             ;LIMPIAR ENTRADAS
-00000E 6892           00021             SETF        TRISA
-000010 6A80           00022             CLRF        PORTA
-000012 6A89           00023             CLRF        LATA
-                      00024            
-000014                00025 MASK    
-                      00026         ;EJECUTAR OPERACIONES
-000014 CF80 F028      00027         MOVFF   PORTA,DATOA
-000018 4228           00028         RRNCF   DATOA,F
-00001A 4228           00029         RRNCF   DATOA,F
-00001C 4228           00030         RRNCF   DATOA,F
-00001E 4228           00031         RRNCF   DATOA,F
-000020 0E03           00032         MOVLW   B'000000011'
-000022 1628           00033         ANDWF   DATOA,F
-000024 0E08           00034         MOVLW   CTE
-000026 2628           00035         ADDWF   DATOA,F
-000028 C028 FF81      00036         MOVFF   DATOA,PORTB
-00002C EF?? F???      00037         GOTO    MASK
-                      00038         END 
-MPASM 5.77                       MASCARA.ASM   9-12-2018  9:09:14         PAGE  2
+  00000028            00061    DATOA    EQU     .40
+                      00062 
+                      00063            ORG  .0
+000000                00064 CONFIGU     ;LIMPIAR ENTRADAS
+000000 6A93           00065             CLRF        TRISB
+000002 6A81           00066             CLRF        PORTB
+000004 6A8A           00067             CLRF        LATB
+000006 0E0F           00068             MOVLW       .15
+000008 6EC1           00069             MOVWF       ADCON1
+00000A 0E07           00070             MOVLW       .7
+00000C 6EB4           00071             MOVWF       CMCON
+                      00072             ;LIMPIAR ENTRADAS
+00000E 6892           00073             SETF        TRISA
+000010 6A80           00074             CLRF        PORTA
+000012 6A89           00075             CLRF        LATA
+                      00076            
+000014                00077 MASK    
+                      00078         ;EJECUTAR OPERACIONES
+000014 CF80 F028      00079         MOVFF   PORTA,DATOA
+000018 4228           00080         RRNCF   DATOA,F
+00001A 4228           00081         RRNCF   DATOA,F
+00001C 4228           00082         RRNCF   DATOA,F
+00001E 4228           00083         RRNCF   DATOA,F
+000020 0E03           00084         MOVLW   B'000000011'
+000022 1628           00085         ANDWF   DATOA,F
+000024 0E08           00086         MOVLW   CTE
+000026 2628           00087         ADDWF   DATOA,F
+000028 C028 FF81      00088         MOVFF   DATOA,PORTB
+00002C EF?? F???      00089         GOTO    MASK
+                      00090         END 
+MPASM 5.77                       MASCARA.ASM   9-19-2018  10:17:16         PAGE  3
 
 
 SYMBOL TABLE
@@ -113,7 +173,7 @@ BRG16                             00000003
 BRGH                              00000002
 BSR                               00000FE0
 BTOEE                             00000004
-MPASM 5.77                       MASCARA.ASM   9-12-2018  9:09:14         PAGE  3
+MPASM 5.77                       MASCARA.ASM   9-19-2018  10:17:16         PAGE  4
 
 
 SYMBOL TABLE
@@ -172,7 +232,7 @@ CM2                               00000002
 CMCON                             00000FB4
 CMIE                              00000006
 CMIF                              00000006
-MPASM 5.77                       MASCARA.ASM   9-12-2018  9:09:14         PAGE  4
+MPASM 5.77                       MASCARA.ASM   9-19-2018  10:17:16         PAGE  5
 
 
 SYMBOL TABLE
@@ -231,7 +291,7 @@ EEDATA                            00000FA8
 EEIE                              00000004
 EEIF                              00000004
 EEIP                              00000004
-MPASM 5.77                       MASCARA.ASM   9-12-2018  9:09:14         PAGE  5
+MPASM 5.77                       MASCARA.ASM   9-19-2018  10:17:16         PAGE  6
 
 
 SYMBOL TABLE
@@ -290,7 +350,7 @@ HLVDL0                            00000000
 HLVDL1                            00000001
 HLVDL2                            00000002
 HLVDL3                            00000003
-MPASM 5.77                       MASCARA.ASM   9-12-2018  9:09:14         PAGE  6
+MPASM 5.77                       MASCARA.ASM   9-19-2018  10:17:16         PAGE  7
 
 
 SYMBOL TABLE
@@ -349,7 +409,7 @@ LATA3                             00000003
 LATA4                             00000004
 LATA5                             00000005
 LATA6                             00000006
-MPASM 5.77                       MASCARA.ASM   9-12-2018  9:09:14         PAGE  7
+MPASM 5.77                       MASCARA.ASM   9-19-2018  10:17:16         PAGE  8
 
 
 SYMBOL TABLE
@@ -408,7 +468,7 @@ NOT_PD                            00000002
 NOT_POR                           00000001
 NOT_RBPU                          00000007
 NOT_RI                            00000004
-MPASM 5.77                       MASCARA.ASM   9-12-2018  9:09:14         PAGE  8
+MPASM 5.77                       MASCARA.ASM   9-19-2018  10:17:16         PAGE  9
 
 
 SYMBOL TABLE
@@ -467,7 +527,7 @@ PLUSW1                            00000FE3
 PLUSW2                            00000FDB
 POR                               00000001
 PORTA                             00000F80
-MPASM 5.77                       MASCARA.ASM   9-12-2018  9:09:14         PAGE  9
+MPASM 5.77                       MASCARA.ASM   9-19-2018  10:17:16         PAGE 10
 
 
 SYMBOL TABLE
@@ -526,7 +586,7 @@ RC2                               00000002
 RC4                               00000004
 RC5                               00000005
 RC6                               00000006
-MPASM 5.77                       MASCARA.ASM   9-12-2018  9:09:14         PAGE 10
+MPASM 5.77                       MASCARA.ASM   9-19-2018  10:17:16         PAGE 11
 
 
 SYMBOL TABLE
@@ -585,7 +645,7 @@ SPEN                              00000007
 SPP0                              00000000
 SPP1                              00000001
 SPP2                              00000002
-MPASM 5.77                       MASCARA.ASM   9-12-2018  9:09:14         PAGE 11
+MPASM 5.77                       MASCARA.ASM   9-19-2018  10:17:16         PAGE 12
 
 
 SYMBOL TABLE
@@ -644,7 +704,7 @@ T0CS                              00000005
 T0IE                              00000005
 T0IF                              00000002
 T0IP                              00000002
-MPASM 5.77                       MASCARA.ASM   9-12-2018  9:09:14         PAGE 12
+MPASM 5.77                       MASCARA.ASM   9-19-2018  10:17:16         PAGE 13
 
 
 SYMBOL TABLE
@@ -703,7 +763,7 @@ TMR2IF                            00000001
 TMR2IP                            00000001
 TMR2ON                            00000002
 TMR3                              00000FB2
-MPASM 5.77                       MASCARA.ASM   9-12-2018  9:09:14         PAGE 13
+MPASM 5.77                       MASCARA.ASM   9-19-2018  10:17:16         PAGE 14
 
 
 SYMBOL TABLE
@@ -762,7 +822,7 @@ TRISE0                            00000000
 TRISE1                            00000001
 TRISE2                            00000002
 TRMT                              00000001
-MPASM 5.77                       MASCARA.ASM   9-12-2018  9:09:14         PAGE 14
+MPASM 5.77                       MASCARA.ASM   9-19-2018  10:17:16         PAGE 15
 
 
 SYMBOL TABLE
@@ -821,7 +881,7 @@ URSTIF                            00000000
 USBEN                             00000003
 USBIE                             00000005
 USBIF                             00000005
-MPASM 5.77                       MASCARA.ASM   9-12-2018  9:09:14         PAGE 15
+MPASM 5.77                       MASCARA.ASM   9-19-2018  10:17:16         PAGE 16
 
 
 SYMBOL TABLE
@@ -880,7 +940,7 @@ _CP2_OFF_5L                       000000FF
 _CP2_ON_5L                        000000FB
 _CP3_OFF_5L                       000000FF
 _CP3_ON_5L                        000000F7
-MPASM 5.77                       MASCARA.ASM   9-12-2018  9:09:14         PAGE 16
+MPASM 5.77                       MASCARA.ASM   9-19-2018  10:17:16         PAGE 17
 
 
 SYMBOL TABLE
@@ -939,7 +999,7 @@ _LPT1OSC_ON_3H                    000000FF
 _LVP_OFF_4L                       000000FB
 _LVP_ON_4L                        000000FF
 _MCLRE_OFF_3H                     0000007F
-MPASM 5.77                       MASCARA.ASM   9-12-2018  9:09:14         PAGE 17
+MPASM 5.77                       MASCARA.ASM   9-19-2018  10:17:16         PAGE 18
 
 
 SYMBOL TABLE
@@ -998,7 +1058,7 @@ _WRTD_OFF_6H                      000000FF
 _WRTD_ON_6H                       0000007F
 _XINST_OFF_4L                     000000BF
 _XINST_ON_4L                      000000FF
-MPASM 5.77                       MASCARA.ASM   9-12-2018  9:09:14         PAGE 18
+MPASM 5.77                       MASCARA.ASM   9-19-2018  10:17:16         PAGE 19
 
 
 SYMBOL TABLE
