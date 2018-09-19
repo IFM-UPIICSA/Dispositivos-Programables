@@ -1,0 +1,60 @@
+MPLINK 5.08, LINKER
+Linker Map File - Created Wed Sep 19 12:10:01 2018
+
+                                 Section Info
+                  Section       Type    Address   Location Size(Bytes)
+                ---------  ---------  ---------  ---------  ---------
+                   .org_0       code   0x000000    program   0x00005c
+                   .cinit    romdata   0x00005c    program   0x000002
+.config_300001_BUILD/DEFAULT/PRODUCTION/CODIGO.    romdata   0x300001    program   0x000001
+.config_300002_BUILD/DEFAULT/PRODUCTION/CODIGO.    romdata   0x300002    program   0x000001
+.config_300003_BUILD/DEFAULT/PRODUCTION/CODIGO.    romdata   0x300003    program   0x000001
+.config_300005_BUILD/DEFAULT/PRODUCTION/CODIGO.    romdata   0x300005    program   0x000001
+.config_300006_BUILD/DEFAULT/PRODUCTION/CODIGO.    romdata   0x300006    program   0x000001
+.config_300008_BUILD/DEFAULT/PRODUCTION/CODIGO.    romdata   0x300008    program   0x000001
+.config_300009_BUILD/DEFAULT/PRODUCTION/CODIGO.    romdata   0x300009    program   0x000001
+.config_30000A_BUILD/DEFAULT/PRODUCTION/CODIGO.    romdata   0x30000a    program   0x000001
+.config_30000B_BUILD/DEFAULT/PRODUCTION/CODIGO.    romdata   0x30000b    program   0x000001
+.config_30000C_BUILD/DEFAULT/PRODUCTION/CODIGO.    romdata   0x30000c    program   0x000001
+.config_30000D_BUILD/DEFAULT/PRODUCTION/CODIGO.    romdata   0x30000d    program   0x000001
+
+
+
+                              Program Memory Usage 
+                               Start         End      
+                           ---------   ---------      
+                            0x000000    0x00005d      
+                            0x300001    0x300003      
+                            0x300005    0x300006      
+                            0x300008    0x30000d      
+            105 out of 33048 program addresses used, program memory utilization is 0%
+
+
+
+                              Symbols - Sorted by Name
+                     Name    Address   Location    Storage File                     
+                ---------  ---------  ---------  --------- ---------                
+                    CASE1   0x000028    program     static C:\Users\Midoriya\Github\Dispositivos\Practicas\Practica 5\ParImpar.X\Codigo.asm
+                   CASE11   0x000032    program     static C:\Users\Midoriya\Github\Dispositivos\Practicas\Practica 5\ParImpar.X\Codigo.asm
+                   CASE12   0x00003a    program     static C:\Users\Midoriya\Github\Dispositivos\Practicas\Practica 5\ParImpar.X\Codigo.asm
+                    CASE2   0x000042    program     static C:\Users\Midoriya\Github\Dispositivos\Practicas\Practica 5\ParImpar.X\Codigo.asm
+                   CASE21   0x00004c    program     static C:\Users\Midoriya\Github\Dispositivos\Practicas\Practica 5\ParImpar.X\Codigo.asm
+                   CASE22   0x000054    program     static C:\Users\Midoriya\Github\Dispositivos\Practicas\Practica 5\ParImpar.X\Codigo.asm
+                     MAIN   0x000016    program     static C:\Users\Midoriya\Github\Dispositivos\Practicas\Practica 5\ParImpar.X\Codigo.asm
+                 SETTINGS   0x000000    program     static C:\Users\Midoriya\Github\Dispositivos\Practicas\Practica 5\ParImpar.X\Codigo.asm
+
+
+
+                              Symbols - Sorted by Address
+                     Name    Address   Location    Storage File                     
+                ---------  ---------  ---------  --------- ---------                
+                 SETTINGS   0x000000    program     static C:\Users\Midoriya\Github\Dispositivos\Practicas\Practica 5\ParImpar.X\Codigo.asm
+                     MAIN   0x000016    program     static C:\Users\Midoriya\Github\Dispositivos\Practicas\Practica 5\ParImpar.X\Codigo.asm
+                    CASE1   0x000028    program     static C:\Users\Midoriya\Github\Dispositivos\Practicas\Practica 5\ParImpar.X\Codigo.asm
+                   CASE11   0x000032    program     static C:\Users\Midoriya\Github\Dispositivos\Practicas\Practica 5\ParImpar.X\Codigo.asm
+                   CASE12   0x00003a    program     static C:\Users\Midoriya\Github\Dispositivos\Practicas\Practica 5\ParImpar.X\Codigo.asm
+                    CASE2   0x000042    program     static C:\Users\Midoriya\Github\Dispositivos\Practicas\Practica 5\ParImpar.X\Codigo.asm
+                   CASE21   0x00004c    program     static C:\Users\Midoriya\Github\Dispositivos\Practicas\Practica 5\ParImpar.X\Codigo.asm
+                   CASE22   0x000054    program     static C:\Users\Midoriya\Github\Dispositivos\Practicas\Practica 5\ParImpar.X\Codigo.asm
+
+
