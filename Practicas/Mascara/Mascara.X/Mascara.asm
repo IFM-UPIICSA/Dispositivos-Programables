@@ -55,6 +55,7 @@
 		;CONFIG7H   DIR 30000DH	40h
 		CONFIG	 EBTRB=OFF	                      ;TABLAS NO PROTEGIDAS
     
+    
     ;PALABRA DE CONFIGURACION
     
    CTE	    EQU	    .8
