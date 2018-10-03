@@ -1,4 +1,4 @@
-MPASM 5.77                        CODIGO.ASM   10-3-2018  11:24:24         PAGE  1
+MPASM 5.77                        CODIGO.ASM   10-3-2018  13:29:26         PAGE  1
 
 
 LOC  OBJECT CODE     LINE SOURCE TEXT
@@ -18,41 +18,101 @@ LOC  OBJECT CODE     LINE SOURCE TEXT
                       00009 
                       01765         LIST
                       00004     
-                      00005     #DEFINE     CERO    0X3F
-                      00006     #DEFINE     UNO     0X06
-                      00007     #DEFINE     DOS     0X5B
-                      00008     #DEFINE     TRES    0X4F
-                      00009     
-                      00010     ORG .0  ;Escribe la primera instrucción en el espacio 0
-                      00011     
-000000                00012 SETTING     
-000000 6A80           00013         CLRF    PORTA  ;LIMPIAR PORTA
-000002 6A89           00014         CLRF    LATA   ;LIMPIAR LATA
-000004 6892           00015         SETF    TRISA  ;HACER TODAS ENTRADAS DE TRISA
-000006 0E0F           00016         MOVLW   B'00001111'
-000008 6EC1           00017         MOVWF   ADCON1  ;DECIR QUE SON ENTRADAS
-00000A 0E07           00018         MOVLW   B'0000111'
-00000C 6EB4           00019         MOVWF   CMCON  ;APAGAR EL COMPARADOR DE VOLTAJE
-00000E 6A83           00020         CLRF    PORTD  ;DECIR QUE SON SALIDAS
-000010 6A95           00021         CLRF    TRISD  ;DECIR QUE SON SALIDAS
-                      00022         
-000012                00023 DECO    
-000012 0E03           00024         MOVLW   B'00000011'
-000014 1480           00025         ANDWF   PORTA,W
-000016 0D02           00026         MULLW   .2
-000018 50F3           00027         MOVF    PRODL,W
-00001A EC?? F???      00028         CALL    TABLA
-00001E 6E83           00029         MOVWF   PORTD
-000020 EF?? F???      00030         GOTO    DECO
-000024 26F9           00031 TABLA   ADDWF   PCL,F
-000026 0C3F           00032         RETLW   CERO
-000028 0C06           00033         RETLW   UNO
-00002A 0C5B           00034         RETLW   DOS
-00002C 0C4F           00035         RETLW   TRES
-                      00036         
+                      00005     ;CONFIG1L   DIR 300000h     20h
+                      00006                 ;CONFIG PLLDIV=1         ; 
+                      00007                 ;CONFIG CPUDIV=OSC1_PLL2        ;CUANDO SE USA XTAL      
+                      00008                         CONFIG  FOSC=INTOSCIO_EC        ;OSCILADOR INTERNO, RA6 COMO PIN, USB USA OSC EC
+                      00009                         CONFIG  FCMEN=OFF                     ;DESHABILITDO EL MONITOREO DEL RELOJ
+                      00010                         CONFIG  IESO=OFF
+                      00011                         ;CONFIG2L  DIR 300002H  38h
+                      00012                                 CONFIG  PWRT=ON                           ;PWRT HABILITADO
+                      00013                         CONFIG        BOR=OFF            ;BROWN OUT RESET DESHABILITADO
+                      00014                         CONFIG        BORV=3             ;RESET AL MINIMO VOLTAJE NO UTILZADO EN ESTE CA
+                            SO
+                      00015                 CONFIG  VREGEN=ON        ;REGULADOR DE USB ENCENDIDO
+                      00016                 ;CONFIG2H  DIR 300003H  1Eh
+                      00017                 CONFIG  WDT=OFF                          ;PERRO GUARDIAN (WATCH DOG) DESHABILITADO
+                      00018                 CONFIG        WDTPS=32768                 ;TIMER DEL WATCHDOG 
+                      00019                 ;CONFIG3H   DIR 300005H 85h
+                      00020                 CONFIG  CCP2MX=ON        ;CCP2 MULTIPLEXADAS CON RC1    
+                      00021                 CONFIG  PBADEN=OFF                      ;PUERTO B PINES DEL 0 AL 4 ENTRADAS DIGITALES
+                      00022                 CONFIG        LPT1OSC=OFF        ;TIMER1 CONFIGURADO PARA OPERAR EN BAJA POTENCIA
+                      00023                 CONFIG  MCLRE=ON                         ;MASTER CLEAR HABILITADO
+                      00024                 ;CONFIG4L   DIR 300006H 81h
+                      00025                 CONFIG  STVREN=ON                             ;SI EL STACK SE LLENA CAUSE RESET         
+                      00026                 CONFIG  LVP=OFF          ;PROGRAMACI?N EN BAJO VOLTAJE APAGADO
+                      00027                 CONFIG  ICPRT=OFF                              ;REGISTRO ICPORT DESHABILITADO
+                      00028         CONFIG        XINST=OFF                        ;SET DE EXTENCION DE INSTRUCCIONES Y DIRECCIONAMI
+                            ENTO INDEXADO OFF
+                      00029                 ;CONFIG5L   DIR 300008H 0Fh
+                      00030                 CONFIG  CP0=OFF          ;LOS BLOQUES DEL C?DIGO DE PROGRAMA
+                      00031                 CONFIG  CP1=OFF                             ;NO ESTAN PROTEGIDOS
+                      00032                 CONFIG  CP2=OFF          
+                      00033                 CONFIG  CP3=OFF
+                      00034                 ;CONFIG5H  DR 300009H           0Ch
+                      00035                 CONFIG  CPB=OFF          ;SECTOR BOOT NO ESTA PROTEGIDO
+                      00036                 CONFIG  CPD=OFF          ;EEPROM NO PROTEGIDA
+                      00037                 ;CONFIG6L    DIR 30000AH        0Fh
+                      00038                 CONFIG   WRT0=OFF                             ;BLOQUES NO PROTEGIDOS CONTRA ESCRITURA
+                      00039                 CONFIG   WRT1=OFF
+                      00040                 CONFIG   WRT2=OFF
+                      00041                 CONFIG   WRT3=OFF
+MPASM 5.77                        CODIGO.ASM   10-3-2018  13:29:26         PAGE  2
+
+
+LOC  OBJECT CODE     LINE SOURCE TEXT
+  VALUE
+
+                      00042 
+                      00043                 ;CONFIG6H DIR 30000BH   E0h
+                      00044                 CONFIG   WRTC=OFF                ;CONFIGURACION DE REGISTROS NO PROTEGIDO
+                      00045                 CONFIG   WRTB=OFF                ;BLOQUE BOOTEABLE NO PROTEGIDO
+                      00046                 CONFIG   WRTD=OFF                ;EEPROMDE DATOS NO PROTEGIDA
+                      00047 
+                      00048                 ;CONFIG7L    DIR 30000CH        0Fh
+                      00049                 CONFIG   EBTR0=OFF              ;TABLAS DE LETURA NO PROTEGIDAS
+                      00050                 CONFIG   EBTR1=OFF
+                      00051                 CONFIG   EBTR2=OFF
+                      00052                 CONFIG   EBTR3=OFF
+                      00053 
+                      00054                 ;CONFIG7H   DIR 30000DH 40h
+                      00055                 CONFIG   EBTRB=OFF                            ;TABLAS NO PROTEGIDAS
+                      00056     
+                      00057     #DEFINE     CERO    0X3F
+                      00058     #DEFINE     UNO     0X06
+                      00059     #DEFINE     DOS     0X5B
+                      00060     #DEFINE     TRES    0X4F
+                      00061     
+                      00062     ORG .0  ;Escribe la primera instrucción en el espacio 0
+                      00063     
+000000                00064 SETTING     
+000000 6A80           00065         CLRF    PORTA  ;LIMPIAR PORTA
+000002 6A89           00066         CLRF    LATA   ;LIMPIAR LATA
+000004 6892           00067         SETF    TRISA  ;HACER TODAS ENTRADAS DE TRISA
+000006 0E0F           00068         MOVLW   B'00001111'
+000008 6EC1           00069         MOVWF   ADCON1  ;DECIR QUE SON ENTRADAS
+00000A 0E07           00070         MOVLW   B'0000111'
+00000C 6EB4           00071         MOVWF   CMCON  ;APAGAR EL COMPARADOR DE VOLTAJE
+00000E 6A83           00072         CLRF    PORTD  ;DECIR QUE SON SALIDAS
+000010 6A95           00073         CLRF    TRISD  ;DECIR QUE SON SALIDAS
+                      00074         
+000012                00075 DECO    
+000012 0E03           00076         MOVLW   B'00000011'
+000014 1480           00077         ANDWF   PORTA,W
+000016 0D02           00078         MULLW   .2
+000018 50F3           00079         MOVF    PRODL,W
+00001A EC?? F???      00080         CALL    TABLA
+00001E 6E83           00081         MOVWF   PORTD
+000020 EF?? F???      00082         GOTO    DECO
+000024 26F9           00083 TABLA   ADDWF   PCL,F
+000026 0C3F           00084         RETLW   CERO
+000028 0C06           00085         RETLW   UNO
+00002A 0C5B           00086         RETLW   DOS
+00002C 0C4F           00087         RETLW   TRES
+                      00088         
 Warning[205]: Found directive in column 1. (END)
-                      00037 END
-MPASM 5.77                        CODIGO.ASM   10-3-2018  11:24:24         PAGE  2
+                      00089 END
+MPASM 5.77                        CODIGO.ASM   10-3-2018  13:29:26         PAGE  3
 
 
 SYMBOL TABLE
@@ -111,7 +171,7 @@ BRG16                             00000003
 BRGH                              00000002
 BSR                               00000FE0
 BTOEE                             00000004
-MPASM 5.77                        CODIGO.ASM   10-3-2018  11:24:24         PAGE  3
+MPASM 5.77                        CODIGO.ASM   10-3-2018  13:29:26         PAGE  4
 
 
 SYMBOL TABLE
@@ -170,7 +230,7 @@ CM1                               00000001
 CM2                               00000002
 CMCON                             00000FB4
 CMIE                              00000006
-MPASM 5.77                        CODIGO.ASM   10-3-2018  11:24:24         PAGE  4
+MPASM 5.77                        CODIGO.ASM   10-3-2018  13:29:26         PAGE  5
 
 
 SYMBOL TABLE
@@ -229,7 +289,7 @@ EEDATA                            00000FA8
 EEIE                              00000004
 EEIF                              00000004
 EEIP                              00000004
-MPASM 5.77                        CODIGO.ASM   10-3-2018  11:24:24         PAGE  5
+MPASM 5.77                        CODIGO.ASM   10-3-2018  13:29:26         PAGE  6
 
 
 SYMBOL TABLE
@@ -288,7 +348,7 @@ HLVDL0                            00000000
 HLVDL1                            00000001
 HLVDL2                            00000002
 HLVDL3                            00000003
-MPASM 5.77                        CODIGO.ASM   10-3-2018  11:24:24         PAGE  6
+MPASM 5.77                        CODIGO.ASM   10-3-2018  13:29:26         PAGE  7
 
 
 SYMBOL TABLE
@@ -347,7 +407,7 @@ LATA3                             00000003
 LATA4                             00000004
 LATA5                             00000005
 LATA6                             00000006
-MPASM 5.77                        CODIGO.ASM   10-3-2018  11:24:24         PAGE  7
+MPASM 5.77                        CODIGO.ASM   10-3-2018  13:29:26         PAGE  8
 
 
 SYMBOL TABLE
@@ -406,7 +466,7 @@ NOT_POR                           00000001
 NOT_RBPU                          00000007
 NOT_RI                            00000004
 NOT_T1SYNC                        00000002
-MPASM 5.77                        CODIGO.ASM   10-3-2018  11:24:24         PAGE  8
+MPASM 5.77                        CODIGO.ASM   10-3-2018  13:29:26         PAGE  9
 
 
 SYMBOL TABLE
@@ -465,7 +525,7 @@ PLUSW2                            00000FDB
 POR                               00000001
 PORTA                             00000F80
 PORTB                             00000F81
-MPASM 5.77                        CODIGO.ASM   10-3-2018  11:24:24         PAGE  9
+MPASM 5.77                        CODIGO.ASM   10-3-2018  13:29:26         PAGE 10
 
 
 SYMBOL TABLE
@@ -524,7 +584,7 @@ RC4                               00000004
 RC5                               00000005
 RC6                               00000006
 RC7                               00000007
-MPASM 5.77                        CODIGO.ASM   10-3-2018  11:24:24         PAGE 10
+MPASM 5.77                        CODIGO.ASM   10-3-2018  13:29:26         PAGE 11
 
 
 SYMBOL TABLE
@@ -583,7 +643,7 @@ SPEN                              00000007
 SPP0                              00000000
 SPP1                              00000001
 SPP2                              00000002
-MPASM 5.77                        CODIGO.ASM   10-3-2018  11:24:24         PAGE 11
+MPASM 5.77                        CODIGO.ASM   10-3-2018  13:29:26         PAGE 12
 
 
 SYMBOL TABLE
@@ -642,7 +702,7 @@ T0CS                              00000005
 T0IE                              00000005
 T0IF                              00000002
 T0IP                              00000002
-MPASM 5.77                        CODIGO.ASM   10-3-2018  11:24:24         PAGE 12
+MPASM 5.77                        CODIGO.ASM   10-3-2018  13:29:26         PAGE 13
 
 
 SYMBOL TABLE
@@ -701,7 +761,7 @@ TMR2IE                            00000001
 TMR2IF                            00000001
 TMR2IP                            00000001
 TMR2ON                            00000002
-MPASM 5.77                        CODIGO.ASM   10-3-2018  11:24:24         PAGE 13
+MPASM 5.77                        CODIGO.ASM   10-3-2018  13:29:26         PAGE 14
 
 
 SYMBOL TABLE
@@ -760,7 +820,7 @@ TRISD7                            00000007
 TRISE                             00000F96
 TRISE0                            00000000
 TRISE1                            00000001
-MPASM 5.77                        CODIGO.ASM   10-3-2018  11:24:24         PAGE 14
+MPASM 5.77                        CODIGO.ASM   10-3-2018  13:29:26         PAGE 15
 
 
 SYMBOL TABLE
@@ -819,7 +879,7 @@ UOEMON                            00000006
 UPUEN                             00000004
 URSTIE                            00000000
 URSTIF                            00000000
-MPASM 5.77                        CODIGO.ASM   10-3-2018  11:24:24         PAGE 15
+MPASM 5.77                        CODIGO.ASM   10-3-2018  13:29:26         PAGE 16
 
 
 SYMBOL TABLE
@@ -878,7 +938,7 @@ _CP0_ON_5L                        000000FE
 _CP1_OFF_5L                       000000FF
 _CP1_ON_5L                        000000FD
 _CP2_OFF_5L                       000000FF
-MPASM 5.77                        CODIGO.ASM   10-3-2018  11:24:24         PAGE 16
+MPASM 5.77                        CODIGO.ASM   10-3-2018  13:29:26         PAGE 17
 
 
 SYMBOL TABLE
@@ -937,7 +997,7 @@ _IESO_OFF_1H                      0000007F
 _IESO_ON_1H                       000000FF
 _LPT1OSC_OFF_3H                   000000FB
 _LPT1OSC_ON_3H                    000000FF
-MPASM 5.77                        CODIGO.ASM   10-3-2018  11:24:24         PAGE 17
+MPASM 5.77                        CODIGO.ASM   10-3-2018  13:29:26         PAGE 18
 
 
 SYMBOL TABLE
@@ -996,7 +1056,7 @@ _WRTB_ON_6H                       000000BF
 _WRTC_OFF_6H                      000000FF
 _WRTC_ON_6H                       000000DF
 _WRTD_OFF_6H                      000000FF
-MPASM 5.77                        CODIGO.ASM   10-3-2018  11:24:24         PAGE 18
+MPASM 5.77                        CODIGO.ASM   10-3-2018  13:29:26         PAGE 19
 
 
 SYMBOL TABLE
