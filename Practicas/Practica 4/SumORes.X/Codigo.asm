@@ -114,4 +114,4 @@ RESTA
     MOVFF   NUM2,PORTB	;MOVER NUM2 A PORTB
     GOTO    INICIO
     
-    END
+END  ;Finaliza el programa
