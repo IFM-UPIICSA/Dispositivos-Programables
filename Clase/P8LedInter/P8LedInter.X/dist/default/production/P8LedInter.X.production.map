@@ -1,0 +1,52 @@
+MPLINK 5.08, LINKER
+Linker Map File - Created Wed Oct 03 14:38:53 2018
+
+                                 Section Info
+                  Section       Type    Address   Location Size(Bytes)
+                ---------  ---------  ---------  ---------  ---------
+                   .org_0       code   0x000000    program   0x000024
+                   .cinit    romdata   0x000024    program   0x000002
+.config_300001_BUILD/DEFAULT/PRODUCTION/CODIGO.    romdata   0x300001    program   0x000001
+.config_300002_BUILD/DEFAULT/PRODUCTION/CODIGO.    romdata   0x300002    program   0x000001
+.config_300003_BUILD/DEFAULT/PRODUCTION/CODIGO.    romdata   0x300003    program   0x000001
+.config_300005_BUILD/DEFAULT/PRODUCTION/CODIGO.    romdata   0x300005    program   0x000001
+.config_300006_BUILD/DEFAULT/PRODUCTION/CODIGO.    romdata   0x300006    program   0x000001
+.config_300008_BUILD/DEFAULT/PRODUCTION/CODIGO.    romdata   0x300008    program   0x000001
+.config_300009_BUILD/DEFAULT/PRODUCTION/CODIGO.    romdata   0x300009    program   0x000001
+.config_30000A_BUILD/DEFAULT/PRODUCTION/CODIGO.    romdata   0x30000a    program   0x000001
+.config_30000B_BUILD/DEFAULT/PRODUCTION/CODIGO.    romdata   0x30000b    program   0x000001
+.config_30000C_BUILD/DEFAULT/PRODUCTION/CODIGO.    romdata   0x30000c    program   0x000001
+.config_30000D_BUILD/DEFAULT/PRODUCTION/CODIGO.    romdata   0x30000d    program   0x000001
+
+
+
+                              Program Memory Usage 
+                               Start         End      
+                           ---------   ---------      
+                            0x000000    0x000025      
+                            0x300001    0x300003      
+                            0x300005    0x300006      
+                            0x300008    0x30000d      
+            49 out of 33048 program addresses used, program memory utilization is 0%
+
+
+
+                              Symbols - Sorted by Name
+                     Name    Address   Location    Storage File                     
+                ---------  ---------  ---------  --------- ---------                
+                      ASK   0x00001c    program     static C:\Users\Midoriya\Github\Dispositivos\Clase\P8LedInter\P8LedInter.X\Codigo.asm
+                    DELAY   0x000016    program     static C:\Users\Midoriya\Github\Dispositivos\Clase\P8LedInter\P8LedInter.X\Codigo.asm
+                    ONOFF   0x000008    program     static C:\Users\Midoriya\Github\Dispositivos\Clase\P8LedInter\P8LedInter.X\Codigo.asm
+                  SETTING   0x000000    program     static C:\Users\Midoriya\Github\Dispositivos\Clase\P8LedInter\P8LedInter.X\Codigo.asm
+
+
+
+                              Symbols - Sorted by Address
+                     Name    Address   Location    Storage File                     
+                ---------  ---------  ---------  --------- ---------                
+                  SETTING   0x000000    program     static C:\Users\Midoriya\Github\Dispositivos\Clase\P8LedInter\P8LedInter.X\Codigo.asm
+                    ONOFF   0x000008    program     static C:\Users\Midoriya\Github\Dispositivos\Clase\P8LedInter\P8LedInter.X\Codigo.asm
+                    DELAY   0x000016    program     static C:\Users\Midoriya\Github\Dispositivos\Clase\P8LedInter\P8LedInter.X\Codigo.asm
+                      ASK   0x00001c    program     static C:\Users\Midoriya\Github\Dispositivos\Clase\P8LedInter\P8LedInter.X\Codigo.asm
+
+
