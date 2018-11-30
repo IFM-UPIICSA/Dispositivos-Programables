@@ -1,0 +1,166 @@
+<?xml version="1.0"?>
+<MCU_DEVICE_FLAGS>
+  <DEVICE>
+    <DEVICE_NAME>P18F4550</DEVICE_NAME>
+    <DEVICE_CLOCK>8</DEVICE_CLOCK>
+    <SETTINGS>
+      <COUNT>39</COUNT>
+      <SETTING0>
+        <NAME>PLL Prescaler Selection</NAME>
+        <DESCRIPTION>No prescale (4 MHz oscillator input drives PLL directly)</DESCRIPTION>
+      </SETTING0>
+      <SETTING1>
+        <NAME>System Clock Postscaler Selection</NAME>
+        <DESCRIPTION>[Primary Oscillator Src: /1][96 MHz PLL Src: /2]</DESCRIPTION>
+      </SETTING1>
+      <SETTING2>
+        <NAME>USB Clock Selection (used in Full-Speed USB mode only; UCFG</NAME>
+        <DESCRIPTION>USB clock source comes directly from the primary oscillator block with no postscale</DESCRIPTION>
+      </SETTING2>
+      <SETTING3>
+        <NAME>Oscillator Selection</NAME>
+        <DESCRIPTION>Internal oscillator, port function on RA6, EC used by USB (INTIO)</DESCRIPTION>
+      </SETTING3>
+      <SETTING4>
+        <NAME>Fail-Safe Clock Monitor</NAME>
+        <DESCRIPTION>Disabled</DESCRIPTION>
+      </SETTING4>
+      <SETTING5>
+        <NAME>Internal/External Oscillator Switchover</NAME>
+        <DESCRIPTION>Disabled</DESCRIPTION>
+      </SETTING5>
+      <SETTING6>
+        <NAME>Power-up Timer</NAME>
+        <DESCRIPTION>Enabled</DESCRIPTION>
+      </SETTING6>
+      <SETTING7>
+        <NAME>Brown-out Reset</NAME>
+        <DESCRIPTION>Disabled</DESCRIPTION>
+      </SETTING7>
+      <SETTING8>
+        <NAME>Brown-out Reset Voltage</NAME>
+        <DESCRIPTION>Minimum setting</DESCRIPTION>
+      </SETTING8>
+      <SETTING9>
+        <NAME>USB Voltage Regulator</NAME>
+        <DESCRIPTION>Disabled</DESCRIPTION>
+      </SETTING9>
+      <SETTING10>
+        <NAME>Watchdog Timer</NAME>
+        <DESCRIPTION>Disabled</DESCRIPTION>
+      </SETTING10>
+      <SETTING11>
+        <NAME>Watchdog Timer Postscale</NAME>
+        <DESCRIPTION>1:32768</DESCRIPTION>
+      </SETTING11>
+      <SETTING12>
+        <NAME>CCP2 MUX bit</NAME>
+        <DESCRIPTION>Disabled</DESCRIPTION>
+      </SETTING12>
+      <SETTING13>
+        <NAME>PORTB A/D</NAME>
+        <DESCRIPTION>Disabled</DESCRIPTION>
+      </SETTING13>
+      <SETTING14>
+        <NAME>Low-Power Timer 1 Oscillator</NAME>
+        <DESCRIPTION>Disabled</DESCRIPTION>
+      </SETTING14>
+      <SETTING15>
+        <NAME>MCLR Pin</NAME>
+        <DESCRIPTION>Enabled</DESCRIPTION>
+      </SETTING15>
+      <SETTING16>
+        <NAME>Stack Full/Underflow Reset</NAME>
+        <DESCRIPTION>Enabled</DESCRIPTION>
+      </SETTING16>
+      <SETTING17>
+        <NAME>Low Voltage Program</NAME>
+        <DESCRIPTION>Disabled</DESCRIPTION>
+      </SETTING17>
+      <SETTING18>
+        <NAME>Dedicated In-Circuit Debug/Programming Port (ICPORT)</NAME>
+        <DESCRIPTION>Disabled</DESCRIPTION>
+      </SETTING18>
+      <SETTING19>
+        <NAME>Extended Instruction Set</NAME>
+        <DESCRIPTION>Disabled</DESCRIPTION>
+      </SETTING19>
+      <SETTING20>
+        <NAME>Background Debug</NAME>
+        <DESCRIPTION>Disabled</DESCRIPTION>
+      </SETTING20>
+      <SETTING21>
+        <NAME>Code Protection (Block 0)</NAME>
+        <DESCRIPTION>Block 0 (000800-001FFFh) is not code-protected</DESCRIPTION>
+      </SETTING21>
+      <SETTING22>
+        <NAME>Code Protection (Block 1)</NAME>
+        <DESCRIPTION>Block 1 (002000-003FFFh) is not code-protected</DESCRIPTION>
+      </SETTING22>
+      <SETTING23>
+        <NAME>Code Protection (Block 2)</NAME>
+        <DESCRIPTION>Block 2 (004000-005FFFh) is not code-protected</DESCRIPTION>
+      </SETTING23>
+      <SETTING24>
+        <NAME>Code Protection (Block 3)</NAME>
+        <DESCRIPTION>Block 3 (006000-007FFFh) is not code-protected</DESCRIPTION>
+      </SETTING24>
+      <SETTING25>
+        <NAME>Boot Block Code Protection</NAME>
+        <DESCRIPTION>Disabled</DESCRIPTION>
+      </SETTING25>
+      <SETTING26>
+        <NAME>Data EEPROM Code Protection</NAME>
+        <DESCRIPTION>Disabled</DESCRIPTION>
+      </SETTING26>
+      <SETTING27>
+        <NAME>Write Protection (Block 0)</NAME>
+        <DESCRIPTION>Block 0 (000800-001FFFh) or (001000-001FFFh) is not write-protected</DESCRIPTION>
+      </SETTING27>
+      <SETTING28>
+        <NAME>Write Protection (Block 1)</NAME>
+        <DESCRIPTION>Block 1 (002000-003FFFh) is not write-protected</DESCRIPTION>
+      </SETTING28>
+      <SETTING29>
+        <NAME>Write Protection (Block 2)</NAME>
+        <DESCRIPTION>Block 2 (004000-005FFFh) is not write-protected</DESCRIPTION>
+      </SETTING29>
+      <SETTING30>
+        <NAME>Write Protection (Block 3)</NAME>
+        <DESCRIPTION>Block 3 (006000-007FFFh) is not write-protected</DESCRIPTION>
+      </SETTING30>
+      <SETTING31>
+        <NAME>Configuration Register Write Protection</NAME>
+        <DESCRIPTION>Disabled</DESCRIPTION>
+      </SETTING31>
+      <SETTING32>
+        <NAME>Boot Block Write Protection</NAME>
+        <DESCRIPTION>Disabled</DESCRIPTION>
+      </SETTING32>
+      <SETTING33>
+        <NAME>Data EEPROM Write Protection</NAME>
+        <DESCRIPTION>Disabled</DESCRIPTION>
+      </SETTING33>
+      <SETTING34>
+        <NAME>Table Read Protection (Block 0)</NAME>
+        <DESCRIPTION>Block 0 (000800-001FFFh) is not protected from table reads executed in other blocks</DESCRIPTION>
+      </SETTING34>
+      <SETTING35>
+        <NAME>Table Read Protection (Block 1)</NAME>
+        <DESCRIPTION>Block 1 (002000-003FFFh) is not protected from table reads executed in other blocks</DESCRIPTION>
+      </SETTING35>
+      <SETTING36>
+        <NAME>Table Read Protection (Block 2)</NAME>
+        <DESCRIPTION>Block 2 (004000-005FFFh) not protected from table reads executed in other blocks</DESCRIPTION>
+      </SETTING36>
+      <SETTING37>
+        <NAME>Table Read Protection bi (Block 3)</NAME>
+        <DESCRIPTION>Block 3 (006000-007FFFh) not protected from table reads executed in other blocks</DESCRIPTION>
+      </SETTING37>
+      <SETTING38>
+        <NAME>Boot Block Table Read Protection</NAME>
+        <DESCRIPTION>Disabled</DESCRIPTION>
+      </SETTING38>
+    </SETTINGS>
+  </DEVICE>
+</MCU_DEVICE_FLAGS>
