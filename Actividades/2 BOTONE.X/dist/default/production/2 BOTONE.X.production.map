@@ -1,0 +1,52 @@
+MPLINK 5.08, LINKER
+Linker Map File - Created Thu Nov 29 12:03:50 2018
+
+                                 Section Info
+                  Section       Type    Address   Location Size(Bytes)
+                ---------  ---------  ---------  ---------  ---------
+                   .org_0       code   0x000000    program   0x00008c
+                   .cinit    romdata   0x00008c    program   0x000002
+
+
+
+                              Program Memory Usage 
+                               Start         End      
+                           ---------   ---------      
+                            0x000000    0x00008d      
+            142 out of 33048 program addresses used, program memory utilization is 0%
+
+
+
+                              Symbols - Sorted by Name
+                     Name    Address   Location    Storage File                     
+                ---------  ---------  ---------  --------- ---------                
+                      ASK   0x000084    program     static C:\Users\Midoriya\Desktop\Otros\Circuito\2 BOTONE.X\2 BOTONE.asm
+                     DECR   0x000056    program     static C:\Users\Midoriya\Desktop\Otros\Circuito\2 BOTONE.X\2 BOTONE.asm
+                    DELAY   0x00007e    program     static C:\Users\Midoriya\Desktop\Otros\Circuito\2 BOTONE.X\2 BOTONE.asm
+                     INCR   0x000046    program     static C:\Users\Midoriya\Desktop\Otros\Circuito\2 BOTONE.X\2 BOTONE.asm
+                     MAIN   0x00001a    program     static C:\Users\Midoriya\Desktop\Otros\Circuito\2 BOTONE.X\2 BOTONE.asm
+                    ONOFF   0x000026    program     static C:\Users\Midoriya\Desktop\Otros\Circuito\2 BOTONE.X\2 BOTONE.asm
+                   ONOFF2   0x000036    program     static C:\Users\Midoriya\Desktop\Otros\Circuito\2 BOTONE.X\2 BOTONE.asm
+                     OTRA   0x00002a    program     static C:\Users\Midoriya\Desktop\Otros\Circuito\2 BOTONE.X\2 BOTONE.asm
+                    OTRA2   0x00003a    program     static C:\Users\Midoriya\Desktop\Otros\Circuito\2 BOTONE.X\2 BOTONE.asm
+                  SETTING   0x000000    program     static C:\Users\Midoriya\Desktop\Otros\Circuito\2 BOTONE.X\2 BOTONE.asm
+                    TABLA   0x000066    program     static C:\Users\Midoriya\Desktop\Otros\Circuito\2 BOTONE.X\2 BOTONE.asm
+
+
+
+                              Symbols - Sorted by Address
+                     Name    Address   Location    Storage File                     
+                ---------  ---------  ---------  --------- ---------                
+                  SETTING   0x000000    program     static C:\Users\Midoriya\Desktop\Otros\Circuito\2 BOTONE.X\2 BOTONE.asm
+                     MAIN   0x00001a    program     static C:\Users\Midoriya\Desktop\Otros\Circuito\2 BOTONE.X\2 BOTONE.asm
+                    ONOFF   0x000026    program     static C:\Users\Midoriya\Desktop\Otros\Circuito\2 BOTONE.X\2 BOTONE.asm
+                     OTRA   0x00002a    program     static C:\Users\Midoriya\Desktop\Otros\Circuito\2 BOTONE.X\2 BOTONE.asm
+                   ONOFF2   0x000036    program     static C:\Users\Midoriya\Desktop\Otros\Circuito\2 BOTONE.X\2 BOTONE.asm
+                    OTRA2   0x00003a    program     static C:\Users\Midoriya\Desktop\Otros\Circuito\2 BOTONE.X\2 BOTONE.asm
+                     INCR   0x000046    program     static C:\Users\Midoriya\Desktop\Otros\Circuito\2 BOTONE.X\2 BOTONE.asm
+                     DECR   0x000056    program     static C:\Users\Midoriya\Desktop\Otros\Circuito\2 BOTONE.X\2 BOTONE.asm
+                    TABLA   0x000066    program     static C:\Users\Midoriya\Desktop\Otros\Circuito\2 BOTONE.X\2 BOTONE.asm
+                    DELAY   0x00007e    program     static C:\Users\Midoriya\Desktop\Otros\Circuito\2 BOTONE.X\2 BOTONE.asm
+                      ASK   0x000084    program     static C:\Users\Midoriya\Desktop\Otros\Circuito\2 BOTONE.X\2 BOTONE.asm
+
+
