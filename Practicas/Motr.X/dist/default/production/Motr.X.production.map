@@ -1,0 +1,50 @@
+MPLINK 5.08, LINKER
+Linker Map File - Created Fri Nov 30 11:28:33 2018
+
+                                 Section Info
+                  Section       Type    Address   Location Size(Bytes)
+                ---------  ---------  ---------  ---------  ---------
+                   .org_0       code   0x000000    program   0x000084
+                   .cinit    romdata   0x000084    program   0x000002
+
+
+
+                              Program Memory Usage 
+                               Start         End      
+                           ---------   ---------      
+                            0x000000    0x000085      
+            134 out of 33048 program addresses used, program memory utilization is 0%
+
+
+
+                              Symbols - Sorted by Name
+                     Name    Address   Location    Storage File                     
+                ---------  ---------  ---------  --------- ---------                
+                      ASK   0x00006e    program     static C:\Users\Midoriya\Github\Dispositivos\Practicas\Motr.X\newAsmTemplate.asm
+                     ASK1   0x00007c    program     static C:\Users\Midoriya\Github\Dispositivos\Practicas\Motr.X\newAsmTemplate.asm
+                    DELAY   0x000068    program     static C:\Users\Midoriya\Github\Dispositivos\Practicas\Motr.X\newAsmTemplate.asm
+                   DELAY1   0x000076    program     static C:\Users\Midoriya\Github\Dispositivos\Practicas\Motr.X\newAsmTemplate.asm
+                    GIRAR   0x000032    program     static C:\Users\Midoriya\Github\Dispositivos\Practicas\Motr.X\newAsmTemplate.asm
+                     MAIN   0x00001c    program     static C:\Users\Midoriya\Github\Dispositivos\Practicas\Motr.X\newAsmTemplate.asm
+                     OTRA   0x000020    program     static C:\Users\Midoriya\Github\Dispositivos\Practicas\Motr.X\newAsmTemplate.asm
+                 PREGUNTA   0x00002a    program     static C:\Users\Midoriya\Github\Dispositivos\Practicas\Motr.X\newAsmTemplate.asm
+                  REPETIR   0x000054    program     static C:\Users\Midoriya\Github\Dispositivos\Practicas\Motr.X\newAsmTemplate.asm
+                  SETTING   0x000000    program     static C:\Users\Midoriya\Github\Dispositivos\Practicas\Motr.X\newAsmTemplate.asm
+
+
+
+                              Symbols - Sorted by Address
+                     Name    Address   Location    Storage File                     
+                ---------  ---------  ---------  --------- ---------                
+                  SETTING   0x000000    program     static C:\Users\Midoriya\Github\Dispositivos\Practicas\Motr.X\newAsmTemplate.asm
+                     MAIN   0x00001c    program     static C:\Users\Midoriya\Github\Dispositivos\Practicas\Motr.X\newAsmTemplate.asm
+                     OTRA   0x000020    program     static C:\Users\Midoriya\Github\Dispositivos\Practicas\Motr.X\newAsmTemplate.asm
+                 PREGUNTA   0x00002a    program     static C:\Users\Midoriya\Github\Dispositivos\Practicas\Motr.X\newAsmTemplate.asm
+                    GIRAR   0x000032    program     static C:\Users\Midoriya\Github\Dispositivos\Practicas\Motr.X\newAsmTemplate.asm
+                  REPETIR   0x000054    program     static C:\Users\Midoriya\Github\Dispositivos\Practicas\Motr.X\newAsmTemplate.asm
+                    DELAY   0x000068    program     static C:\Users\Midoriya\Github\Dispositivos\Practicas\Motr.X\newAsmTemplate.asm
+                      ASK   0x00006e    program     static C:\Users\Midoriya\Github\Dispositivos\Practicas\Motr.X\newAsmTemplate.asm
+                   DELAY1   0x000076    program     static C:\Users\Midoriya\Github\Dispositivos\Practicas\Motr.X\newAsmTemplate.asm
+                     ASK1   0x00007c    program     static C:\Users\Midoriya\Github\Dispositivos\Practicas\Motr.X\newAsmTemplate.asm
+
+
