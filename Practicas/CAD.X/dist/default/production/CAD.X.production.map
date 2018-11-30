@@ -1,0 +1,42 @@
+MPLINK 5.08, LINKER
+Linker Map File - Created Fri Nov 30 09:01:16 2018
+
+                                 Section Info
+                  Section       Type    Address   Location Size(Bytes)
+                ---------  ---------  ---------  ---------  ---------
+                   .org_0       code   0x000000    program   0x00005c
+                   .cinit    romdata   0x00005c    program   0x000002
+
+
+
+                              Program Memory Usage 
+                               Start         End      
+                           ---------   ---------      
+                            0x000000    0x00005d      
+            94 out of 33048 program addresses used, program memory utilization is 0%
+
+
+
+                              Symbols - Sorted by Name
+                     Name    Address   Location    Storage File                     
+                ---------  ---------  ---------  --------- ---------                
+                    APAGA   0x000056    program     static C:\Users\Midoriya\Desktop\Reparaciones\CAD.X\codigo.asm
+                      ASK   0x000026    program     static C:\Users\Midoriya\Desktop\Reparaciones\CAD.X\codigo.asm
+                    CHECK   0x000044    program     static C:\Users\Midoriya\Desktop\Reparaciones\CAD.X\codigo.asm
+                     MAIN   0x000024    program     static C:\Users\Midoriya\Desktop\Reparaciones\CAD.X\codigo.asm
+                   PRENDE   0x000050    program     static C:\Users\Midoriya\Desktop\Reparaciones\CAD.X\codigo.asm
+                  SETTING   0x000000    program     static C:\Users\Midoriya\Desktop\Reparaciones\CAD.X\codigo.asm
+
+
+
+                              Symbols - Sorted by Address
+                     Name    Address   Location    Storage File                     
+                ---------  ---------  ---------  --------- ---------                
+                  SETTING   0x000000    program     static C:\Users\Midoriya\Desktop\Reparaciones\CAD.X\codigo.asm
+                     MAIN   0x000024    program     static C:\Users\Midoriya\Desktop\Reparaciones\CAD.X\codigo.asm
+                      ASK   0x000026    program     static C:\Users\Midoriya\Desktop\Reparaciones\CAD.X\codigo.asm
+                    CHECK   0x000044    program     static C:\Users\Midoriya\Desktop\Reparaciones\CAD.X\codigo.asm
+                   PRENDE   0x000050    program     static C:\Users\Midoriya\Desktop\Reparaciones\CAD.X\codigo.asm
+                    APAGA   0x000056    program     static C:\Users\Midoriya\Desktop\Reparaciones\CAD.X\codigo.asm
+
+
