@@ -1,0 +1,122 @@
+MPLINK 5.08, LINKER
+Linker Map File - Created Thu Nov 29 11:32:30 2018
+
+                                 Section Info
+                  Section       Type    Address   Location Size(Bytes)
+                ---------  ---------  ---------  ---------  ---------
+                   .org_0       code   0x000000    program   0x000372
+                   .cinit    romdata   0x000372    program   0x000002
+
+
+
+                              Program Memory Usage 
+                               Start         End      
+                           ---------   ---------      
+                            0x000000    0x000373      
+            884 out of 33048 program addresses used, program memory utilization is 2%
+
+
+
+                              Symbols - Sorted by Name
+                     Name    Address   Location    Storage File                     
+                ---------  ---------  ---------  --------- ---------                
+                     ASK1   0x00035c    program     static C:\Users\Midoriya\Desktop\Otros\Circuito\series.X\serie.asm
+                     ASK2   0x00036a    program     static C:\Users\Midoriya\Desktop\Otros\Circuito\series.X\serie.asm
+                       D1   0x0001b4    program     static C:\Users\Midoriya\Desktop\Otros\Circuito\series.X\serie.asm
+                       D2   0x0001de    program     static C:\Users\Midoriya\Desktop\Otros\Circuito\series.X\serie.asm
+                       D3   0x000208    program     static C:\Users\Midoriya\Desktop\Otros\Circuito\series.X\serie.asm
+                       D4   0x000232    program     static C:\Users\Midoriya\Desktop\Otros\Circuito\series.X\serie.asm
+                       D5   0x000258    program     static C:\Users\Midoriya\Desktop\Otros\Circuito\series.X\serie.asm
+                       D6   0x00027e    program     static C:\Users\Midoriya\Desktop\Otros\Circuito\series.X\serie.asm
+                       D7   0x0002b0    program     static C:\Users\Midoriya\Desktop\Otros\Circuito\series.X\serie.asm
+                       D8   0x0002e2    program     static C:\Users\Midoriya\Desktop\Otros\Circuito\series.X\serie.asm
+                       D9   0x000314    program     static C:\Users\Midoriya\Desktop\Otros\Circuito\series.X\serie.asm
+                   DELAYB   0x000356    program     static C:\Users\Midoriya\Desktop\Otros\Circuito\series.X\serie.asm
+                   DELAYL   0x000364    program     static C:\Users\Midoriya\Desktop\Otros\Circuito\series.X\serie.asm
+                       E1   0x00004e    program     static C:\Users\Midoriya\Desktop\Otros\Circuito\series.X\serie.asm
+                       E2   0x000076    program     static C:\Users\Midoriya\Desktop\Otros\Circuito\series.X\serie.asm
+                       E3   0x00009e    program     static C:\Users\Midoriya\Desktop\Otros\Circuito\series.X\serie.asm
+                       E4   0x0000c6    program     static C:\Users\Midoriya\Desktop\Otros\Circuito\series.X\serie.asm
+                       E5   0x0000ec    program     static C:\Users\Midoriya\Desktop\Otros\Circuito\series.X\serie.asm
+                       E6   0x000112    program     static C:\Users\Midoriya\Desktop\Otros\Circuito\series.X\serie.asm
+                       E7   0x00013a    program     static C:\Users\Midoriya\Desktop\Otros\Circuito\series.X\serie.asm
+                       E8   0x000162    program     static C:\Users\Midoriya\Desktop\Otros\Circuito\series.X\serie.asm
+                     MAIN   0x000018    program     static C:\Users\Midoriya\Desktop\Otros\Circuito\series.X\serie.asm
+                     OFFL   0x000346    program     static C:\Users\Midoriya\Desktop\Otros\Circuito\series.X\serie.asm
+                     OTRA   0x00001c    program     static C:\Users\Midoriya\Desktop\Otros\Circuito\series.X\serie.asm
+                    OTRA1   0x000042    program     static C:\Users\Midoriya\Desktop\Otros\Circuito\series.X\serie.asm
+                   OTRA11   0x0001a8    program     static C:\Users\Midoriya\Desktop\Otros\Circuito\series.X\serie.asm
+                  OTRA111   0x00033a    program     static C:\Users\Midoriya\Desktop\Otros\Circuito\series.X\serie.asm
+                    OTRA2   0x00006a    program     static C:\Users\Midoriya\Desktop\Otros\Circuito\series.X\serie.asm
+                   OTRA22   0x0001d2    program     static C:\Users\Midoriya\Desktop\Otros\Circuito\series.X\serie.asm
+                    OTRA3   0x000092    program     static C:\Users\Midoriya\Desktop\Otros\Circuito\series.X\serie.asm
+                   OTRA33   0x0001fc    program     static C:\Users\Midoriya\Desktop\Otros\Circuito\series.X\serie.asm
+                    OTRA4   0x0000ba    program     static C:\Users\Midoriya\Desktop\Otros\Circuito\series.X\serie.asm
+                   OTRA44   0x000226    program     static C:\Users\Midoriya\Desktop\Otros\Circuito\series.X\serie.asm
+                    OTRA5   0x0000e0    program     static C:\Users\Midoriya\Desktop\Otros\Circuito\series.X\serie.asm
+                   OTRA55   0x00024c    program     static C:\Users\Midoriya\Desktop\Otros\Circuito\series.X\serie.asm
+                    OTRA6   0x000106    program     static C:\Users\Midoriya\Desktop\Otros\Circuito\series.X\serie.asm
+                   OTRA66   0x000272    program     static C:\Users\Midoriya\Desktop\Otros\Circuito\series.X\serie.asm
+                    OTRA7   0x00012e    program     static C:\Users\Midoriya\Desktop\Otros\Circuito\series.X\serie.asm
+                   OTRA77   0x0002a4    program     static C:\Users\Midoriya\Desktop\Otros\Circuito\series.X\serie.asm
+                    OTRA8   0x000156    program     static C:\Users\Midoriya\Desktop\Otros\Circuito\series.X\serie.asm
+                   OTRA88   0x0002d6    program     static C:\Users\Midoriya\Desktop\Otros\Circuito\series.X\serie.asm
+                    OTRA9   0x00017e    program     static C:\Users\Midoriya\Desktop\Otros\Circuito\series.X\serie.asm
+                   OTRA99   0x000308    program     static C:\Users\Midoriya\Desktop\Otros\Circuito\series.X\serie.asm
+                   SERIE1   0x000028    program     static C:\Users\Midoriya\Desktop\Otros\Circuito\series.X\serie.asm
+                   SERIE2   0x00018a    program     static C:\Users\Midoriya\Desktop\Otros\Circuito\series.X\serie.asm
+                  SETTING   0x000000    program     static C:\Users\Midoriya\Desktop\Otros\Circuito\series.X\serie.asm
+
+
+
+                              Symbols - Sorted by Address
+                     Name    Address   Location    Storage File                     
+                ---------  ---------  ---------  --------- ---------                
+                  SETTING   0x000000    program     static C:\Users\Midoriya\Desktop\Otros\Circuito\series.X\serie.asm
+                     MAIN   0x000018    program     static C:\Users\Midoriya\Desktop\Otros\Circuito\series.X\serie.asm
+                     OTRA   0x00001c    program     static C:\Users\Midoriya\Desktop\Otros\Circuito\series.X\serie.asm
+                   SERIE1   0x000028    program     static C:\Users\Midoriya\Desktop\Otros\Circuito\series.X\serie.asm
+                    OTRA1   0x000042    program     static C:\Users\Midoriya\Desktop\Otros\Circuito\series.X\serie.asm
+                       E1   0x00004e    program     static C:\Users\Midoriya\Desktop\Otros\Circuito\series.X\serie.asm
+                    OTRA2   0x00006a    program     static C:\Users\Midoriya\Desktop\Otros\Circuito\series.X\serie.asm
+                       E2   0x000076    program     static C:\Users\Midoriya\Desktop\Otros\Circuito\series.X\serie.asm
+                    OTRA3   0x000092    program     static C:\Users\Midoriya\Desktop\Otros\Circuito\series.X\serie.asm
+                       E3   0x00009e    program     static C:\Users\Midoriya\Desktop\Otros\Circuito\series.X\serie.asm
+                    OTRA4   0x0000ba    program     static C:\Users\Midoriya\Desktop\Otros\Circuito\series.X\serie.asm
+                       E4   0x0000c6    program     static C:\Users\Midoriya\Desktop\Otros\Circuito\series.X\serie.asm
+                    OTRA5   0x0000e0    program     static C:\Users\Midoriya\Desktop\Otros\Circuito\series.X\serie.asm
+                       E5   0x0000ec    program     static C:\Users\Midoriya\Desktop\Otros\Circuito\series.X\serie.asm
+                    OTRA6   0x000106    program     static C:\Users\Midoriya\Desktop\Otros\Circuito\series.X\serie.asm
+                       E6   0x000112    program     static C:\Users\Midoriya\Desktop\Otros\Circuito\series.X\serie.asm
+                    OTRA7   0x00012e    program     static C:\Users\Midoriya\Desktop\Otros\Circuito\series.X\serie.asm
+                       E7   0x00013a    program     static C:\Users\Midoriya\Desktop\Otros\Circuito\series.X\serie.asm
+                    OTRA8   0x000156    program     static C:\Users\Midoriya\Desktop\Otros\Circuito\series.X\serie.asm
+                       E8   0x000162    program     static C:\Users\Midoriya\Desktop\Otros\Circuito\series.X\serie.asm
+                    OTRA9   0x00017e    program     static C:\Users\Midoriya\Desktop\Otros\Circuito\series.X\serie.asm
+                   SERIE2   0x00018a    program     static C:\Users\Midoriya\Desktop\Otros\Circuito\series.X\serie.asm
+                   OTRA11   0x0001a8    program     static C:\Users\Midoriya\Desktop\Otros\Circuito\series.X\serie.asm
+                       D1   0x0001b4    program     static C:\Users\Midoriya\Desktop\Otros\Circuito\series.X\serie.asm
+                   OTRA22   0x0001d2    program     static C:\Users\Midoriya\Desktop\Otros\Circuito\series.X\serie.asm
+                       D2   0x0001de    program     static C:\Users\Midoriya\Desktop\Otros\Circuito\series.X\serie.asm
+                   OTRA33   0x0001fc    program     static C:\Users\Midoriya\Desktop\Otros\Circuito\series.X\serie.asm
+                       D3   0x000208    program     static C:\Users\Midoriya\Desktop\Otros\Circuito\series.X\serie.asm
+                   OTRA44   0x000226    program     static C:\Users\Midoriya\Desktop\Otros\Circuito\series.X\serie.asm
+                       D4   0x000232    program     static C:\Users\Midoriya\Desktop\Otros\Circuito\series.X\serie.asm
+                   OTRA55   0x00024c    program     static C:\Users\Midoriya\Desktop\Otros\Circuito\series.X\serie.asm
+                       D5   0x000258    program     static C:\Users\Midoriya\Desktop\Otros\Circuito\series.X\serie.asm
+                   OTRA66   0x000272    program     static C:\Users\Midoriya\Desktop\Otros\Circuito\series.X\serie.asm
+                       D6   0x00027e    program     static C:\Users\Midoriya\Desktop\Otros\Circuito\series.X\serie.asm
+                   OTRA77   0x0002a4    program     static C:\Users\Midoriya\Desktop\Otros\Circuito\series.X\serie.asm
+                       D7   0x0002b0    program     static C:\Users\Midoriya\Desktop\Otros\Circuito\series.X\serie.asm
+                   OTRA88   0x0002d6    program     static C:\Users\Midoriya\Desktop\Otros\Circuito\series.X\serie.asm
+                       D8   0x0002e2    program     static C:\Users\Midoriya\Desktop\Otros\Circuito\series.X\serie.asm
+                   OTRA99   0x000308    program     static C:\Users\Midoriya\Desktop\Otros\Circuito\series.X\serie.asm
+                       D9   0x000314    program     static C:\Users\Midoriya\Desktop\Otros\Circuito\series.X\serie.asm
+                  OTRA111   0x00033a    program     static C:\Users\Midoriya\Desktop\Otros\Circuito\series.X\serie.asm
+                     OFFL   0x000346    program     static C:\Users\Midoriya\Desktop\Otros\Circuito\series.X\serie.asm
+                   DELAYB   0x000356    program     static C:\Users\Midoriya\Desktop\Otros\Circuito\series.X\serie.asm
+                     ASK1   0x00035c    program     static C:\Users\Midoriya\Desktop\Otros\Circuito\series.X\serie.asm
+                   DELAYL   0x000364    program     static C:\Users\Midoriya\Desktop\Otros\Circuito\series.X\serie.asm
+                     ASK2   0x00036a    program     static C:\Users\Midoriya\Desktop\Otros\Circuito\series.X\serie.asm
+
+
