@@ -12,7 +12,7 @@ Value=0
 [USE_HEAP]
 Value=0
 [HEAP_SIZE]
-Value=0
+Value=2000
 [EEPROM_DEFINITION]
 Value=
 [FILES]
@@ -46,8 +46,10 @@ File1=Lcd_Constants
 File2=Keypad4x4
 Count=3
 [EXPANDED_NODES]
-Count=0
+0=Tortillas.mcppi
+Count=1
 [LIB_EXPANDED_NODES]
 0=mikroE Libraries
 1=System Libraries
-Count=2
+238=Keypad4x4
+Count=4

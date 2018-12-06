@@ -1,5 +1,6 @@
 main
 	__CC2DW
+	Keypad_Init
 	Lcd_Init
 		Delay_5500us
 		Delay_1us
