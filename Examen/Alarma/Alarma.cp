@@ -72,11 +72,11 @@ void main() {
 
  while( (PORTA.F0 == 0) && (PORTA.F1 == 0) ){
  PORTC.F0 = ~PORTC.F0;
- Delay_ms(500);
+ Delay_ms(100);
  }
 
  PORTC.F0 = 0;
-
+ flag = 0;
 
  while (flag == 0){
 
@@ -114,21 +114,21 @@ void main() {
  Lcd_Cmd(_LCD_CLEAR);
  Lcd_Out(1,1,txt5);
  Lcd_Out(2,1,txt9);
- Delay_ms(3000);
+ Delay_ms(500);
  Lcd_Cmd(_LCD_CLEAR);
  }else if( (kp==4) && ( (PORTA.F0 == 1) || (PORTA.F1 == 1) ) ){
 
  Lcd_Cmd(_LCD_CLEAR);
  Lcd_Out(1,1,txt2);
  Lcd_Out(2,1,txt3);
- Delay_ms(3000);
+ Delay_ms(500);
  Lcd_Cmd(_LCD_CLEAR);
  }else{
 
  Lcd_Cmd(_LCD_CLEAR);
  Lcd_Out(1,1,txt2);
  Lcd_Out(2,1,txt4);
- Delay_ms(3000);
+ Delay_ms(500);
  Lcd_Cmd(_LCD_CLEAR);
  }
  }

@@ -138,12 +138,12 @@ L_main15:
 L__main46:
 ;Alarma.c,73 :: 		PORTC.F0 = ~PORTC.F0;
 	BTG         PORTC+0, 0 
-;Alarma.c,74 :: 		Delay_ms(500);
-	MOVLW       6
+;Alarma.c,74 :: 		Delay_ms(100);
+	MOVLW       2
 	MOVWF       R11, 0
-	MOVLW       19
+	MOVLW       4
 	MOVWF       R12, 0
-	MOVLW       173
+	MOVLW       186
 	MOVWF       R13, 0
 L_main19:
 	DECFSZ      R13, 1, 1
@@ -153,12 +153,14 @@ L_main19:
 	DECFSZ      R11, 1, 1
 	BRA         L_main19
 	NOP
-	NOP
 ;Alarma.c,75 :: 		}
 	GOTO        L_main15
 L_main16:
 ;Alarma.c,77 :: 		PORTC.F0 = 0;
 	BCF         PORTC+0, 0 
+;Alarma.c,78 :: 		flag = 0;
+	CLRF        _flag+0 
+	CLRF        _flag+1 
 ;Alarma.c,80 :: 		while (flag == 0){
 L_main20:
 	MOVLW       0
@@ -366,12 +368,12 @@ L_main21:
 	MOVLW       hi_addr(_txt9+0)
 	MOVWF       FARG_Lcd_Out_text+1 
 	CALL        _Lcd_Out+0, 0
-;Alarma.c,116 :: 		Delay_ms(3000);
-	MOVLW       31
+;Alarma.c,116 :: 		Delay_ms(500);
+	MOVLW       6
 	MOVWF       R11, 0
-	MOVLW       113
+	MOVLW       19
 	MOVWF       R12, 0
-	MOVLW       30
+	MOVLW       173
 	MOVWF       R13, 0
 L_main34:
 	DECFSZ      R13, 1, 1
@@ -380,6 +382,7 @@ L_main34:
 	BRA         L_main34
 	DECFSZ      R11, 1, 1
 	BRA         L_main34
+	NOP
 	NOP
 ;Alarma.c,117 :: 		Lcd_Cmd(_LCD_CLEAR);
 	MOVLW       1
@@ -423,12 +426,12 @@ L__main44:
 	MOVLW       hi_addr(_txt3+0)
 	MOVWF       FARG_Lcd_Out_text+1 
 	CALL        _Lcd_Out+0, 0
-;Alarma.c,123 :: 		Delay_ms(3000);
-	MOVLW       31
+;Alarma.c,123 :: 		Delay_ms(500);
+	MOVLW       6
 	MOVWF       R11, 0
-	MOVLW       113
+	MOVLW       19
 	MOVWF       R12, 0
-	MOVLW       30
+	MOVLW       173
 	MOVWF       R13, 0
 L_main41:
 	DECFSZ      R13, 1, 1
@@ -437,6 +440,7 @@ L_main41:
 	BRA         L_main41
 	DECFSZ      R11, 1, 1
 	BRA         L_main41
+	NOP
 	NOP
 ;Alarma.c,124 :: 		Lcd_Cmd(_LCD_CLEAR);
 	MOVLW       1
@@ -469,12 +473,12 @@ L_main40:
 	MOVLW       hi_addr(_txt4+0)
 	MOVWF       FARG_Lcd_Out_text+1 
 	CALL        _Lcd_Out+0, 0
-;Alarma.c,130 :: 		Delay_ms(3000);
-	MOVLW       31
+;Alarma.c,130 :: 		Delay_ms(500);
+	MOVLW       6
 	MOVWF       R11, 0
-	MOVLW       113
+	MOVLW       19
 	MOVWF       R12, 0
-	MOVLW       30
+	MOVLW       173
 	MOVWF       R13, 0
 L_main43:
 	DECFSZ      R13, 1, 1
@@ -483,6 +487,7 @@ L_main43:
 	BRA         L_main43
 	DECFSZ      R11, 1, 1
 	BRA         L_main43
+	NOP
 	NOP
 ;Alarma.c,131 :: 		Lcd_Cmd(_LCD_CLEAR);
 	MOVLW       1

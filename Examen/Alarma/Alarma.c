@@ -71,11 +71,11 @@ void main() {
               //Ciclo de alarma, se enciende y apaga el led
               while( (PORTA.F0 == 0) && (PORTA.F1 == 0) ){
                  PORTC.F0 = ~PORTC.F0;
-                 Delay_ms(500);
+                 Delay_ms(100);
               }
-              //Apagar led
+              //Reiniciar valores
               PORTC.F0 = 0;
-
+              flag = 0;
               //Salida de la campana
               while (flag == 0){
                     //Alarma en alerta
@@ -108,26 +108,26 @@ void main() {
                    Delay_ms(500);
                  }
               }
-              
+
               //Campana desactivada
               Lcd_Cmd(_LCD_CLEAR);
               Lcd_Out(1,1,txt5);
               Lcd_Out(2,1,txt9);
-              Delay_ms(3000);
+              Delay_ms(500);
               Lcd_Cmd(_LCD_CLEAR);
            }else if( (kp==4) && ( (PORTA.F0 == 1) || (PORTA.F1 == 1) ) ){
                  //Entrada correcta, puerta abierta
               Lcd_Cmd(_LCD_CLEAR);               // Clear display
               Lcd_Out(1,1,txt2);
               Lcd_Out(2,1,txt3);
-              Delay_ms(3000);
+              Delay_ms(500);
               Lcd_Cmd(_LCD_CLEAR);
            }else{
                  //Entrada incorrecta
               Lcd_Cmd(_LCD_CLEAR);               // Clear display
               Lcd_Out(1,1,txt2);
               Lcd_Out(2,1,txt4);
-              Delay_ms(3000);
+              Delay_ms(500);
               Lcd_Cmd(_LCD_CLEAR);
            }
        }
