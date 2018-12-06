@@ -1,0 +1,11 @@
+0	1	mikroCPIC1618.exe -MSF -DBG -pP18F4550 -DL -O11111114 -fo8 -N"C:\Users\Midoriya\Desktop\Examen\Estacionamiento.mcppi" -SP"C:\Users\Midoriya\Documents\Mikroelektronika\mikroC PRO for PIC\Defs\" -SP"C:\Users\Midoriya\Documents\Mikroelektronika\mikroC PRO for PIC\uses\P18\" -SP"C:\Users\Midoriya\Desktop\Examen\" -IP"C:\Users\Midoriya\Documents\Mikroelektronika\mikroC PRO for PIC\uses\P18\" -IP"C:\Users\Midoriya\Desktop\Examen\" "Estacionamiento.c" "__Lib_Math.mcl" "__Lib_MathDouble.mcl" "__Lib_System.mcl" "__Lib_Delays.mcl" "__Lib_Keypad4x4.mcl" "__Lib_LcdConsts.mcl" "__Lib_Lcd.mcl"	 
+hint: 0	1139	Available RAM: 2027 [bytes], Available ROM: 32768 [bytes]	 
+diagnostics: 0	122	Compilation Started	Estacionamiento.c
+diagnostics: 95	123	Compiled Successfully	Estacionamiento.c
+diagnostics: 0	127	All files Compiled in 94 ms	 
+hint: 0	1144	Used RAM (bytes): 86 (4%)  Free RAM (bytes): 1941 (96%)	Used RAM (bytes): 86 (4%)  Free RAM (bytes): 1941 (96%)
+hint: 0	1144	Used ROM (bytes): 1384 (4%)  Free ROM (bytes): 31384 (96%)	Used ROM (bytes): 1384 (4%)  Free ROM (bytes): 31384 (96%)
+diagnostics: 0	125	Project Linked Successfully	Estacionamiento.mcppi
+diagnostics: 0	128	Linked in 15 ms	 
+diagnostics: 0	129	Project 'Estacionamiento.mcppi' completed: 140 ms	 
+diagnostics: 0	103	Finished successfully: 06 dic. 2018, 10:57:39	Estacionamiento.mcppi
