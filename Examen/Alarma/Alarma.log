@@ -1,0 +1,11 @@
+0	1	mikroCPIC1618.exe -MSF -DBG -pP18F4550 -DL -O11111114 -fo8 -N"C:\Users\Midoriya\Github\Dispositivos\Examen\Alarma\Alarma.mcppi" -SP"C:\Users\Midoriya\Documents\Mikroelektronika\mikroC PRO for PIC\Defs\" -SP"C:\Users\Midoriya\Documents\Mikroelektronika\mikroC PRO for PIC\uses\P18\" -SP"C:\Users\Midoriya\Github\Dispositivos\Examen\Alarma\" -IP"C:\Users\Midoriya\Documents\Mikroelektronika\mikroC PRO for PIC\uses\P18\" -IP"C:\Users\Midoriya\Github\Dispositivos\Examen\Alarma\" "Alarma.c" "__Lib_Math.mcl" "__Lib_MathDouble.mcl" "__Lib_System.mcl" "__Lib_Delays.mcl" "__Lib_Keypad4x4.mcl" "__Lib_LcdConsts.mcl" "__Lib_Lcd.mcl"	 
+hint: 0	1139	Available RAM: 2027 [bytes], Available ROM: 32768 [bytes]	 
+diagnostics: 0	122	Compilation Started	Alarma.c
+diagnostics: 103	123	Compiled Successfully	Alarma.c
+diagnostics: 0	127	All files Compiled in 93 ms	 
+hint: 0	1144	Used RAM (bytes): 84 (4%)  Free RAM (bytes): 1943 (96%)	Used RAM (bytes): 84 (4%)  Free RAM (bytes): 1943 (96%)
+hint: 0	1144	Used ROM (bytes): 1306 (4%)  Free ROM (bytes): 31462 (96%)	Used ROM (bytes): 1306 (4%)  Free ROM (bytes): 31462 (96%)
+diagnostics: 0	125	Project Linked Successfully	Alarma.mcppi
+diagnostics: 0	128	Linked in 32 ms	 
+diagnostics: 0	129	Project 'Alarma.mcppi' completed: 157 ms	 
+diagnostics: 0	103	Finished successfully: 06 dic. 2018, 01:05:37	Alarma.mcppi
