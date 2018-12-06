@@ -50,6 +50,5 @@ Count=0
 [LIB_EXPANDED_NODES]
 0=mikroE Libraries
 1=System Libraries
-238=Keypad4x4
 242=Lcd
-Count=4
+Count=3

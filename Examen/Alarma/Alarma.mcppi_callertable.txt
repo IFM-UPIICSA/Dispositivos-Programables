@@ -22,7 +22,7 @@ main
 				Delay_1us
 				Delay_5500us
 				Delay_50us
-	CustomChar1
+	CustomChar
 		Lcd_Cmd
 			Delay_1us
 			Delay_5500us

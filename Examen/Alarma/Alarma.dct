@@ -202,8 +202,7 @@ ccpr2h
 ccpr2l
 cfgs
 cfgs_bit
-character1
-character2
+character
 chs0
 chs0_bit
 chs1
@@ -259,8 +258,7 @@ csen
 csen_bit
 csrc
 csrc_bit
-customchar1
-customchar2
+customchar
 cvr0
 cvr0_bit
 cvr1
@@ -455,6 +453,7 @@ fast
 ferr
 ferr_bit
 fixsign32
+flag
 flts
 flts_bit
 free
@@ -1396,6 +1395,9 @@ txt2
 txt3
 txt4
 txt5
+txt7
+txt8
+txt9
 ua
 ua_bit
 uaddr
